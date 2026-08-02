@@ -27,7 +27,6 @@ export const tools: Tool[] = [
     description: "Switch between upper, lower, and title case instantly.",
     icon: CaseSensitive,
     href: "/tools/case-converter",
-    comingSoon: true,
   },
   {
     name: "Text Sorter",

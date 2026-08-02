@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 
 import { RemoveDuplicateLinesTool } from "@/components/tools/remove-duplicate-lines-tool"
+import { ToolContentSections } from "@/components/tools/content/tool-content-sections"
+import { toolContent } from "@/lib/tools/content"
 
 export const metadata: Metadata = {
   title: "Remove Duplicate Lines — CleanTextly",
@@ -9,6 +11,8 @@ export const metadata: Metadata = {
 }
 
 export default function RemoveDuplicateLinesPage() {
+  const content = toolContent["/tools/remove-duplicate-lines"]
+
   return (
     <main className="flex flex-1 flex-col bg-background">
       <section className="mx-auto w-full max-w-5xl px-4 py-12 sm:py-16">
@@ -25,6 +29,12 @@ export default function RemoveDuplicateLinesPage() {
         <div className="mt-10">
           <RemoveDuplicateLinesTool />
         </div>
+
+        {content && (
+          <div className="mt-16 border-t border-border pt-16">
+            <ToolContentSections content={content} />
+          </div>
+        )}
       </section>
     </main>
   )

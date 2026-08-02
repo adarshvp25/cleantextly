@@ -145,4 +145,120 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/word-counter",
     ],
   },
+  "/tools/remove-duplicate-lines": {
+    introduction:
+      "CleanTextly's Remove Duplicate Lines tool scans any block of text and strips out repeated lines, keeping only the first occurrence of each one — instantly, right in your browser. Paste a list, a log file, or an exported spreadsheet column, and watch duplicates disappear as you type. Nothing you paste is ever uploaded, so it's safe for anything from a mailing list to internal notes.",
+    features: [
+      {
+        title: "Instant Deduplication",
+        description:
+          "Duplicate lines are removed live as you type or paste — there's no button you have to click to see the result.",
+      },
+      {
+        title: "Keeps First Occurrence, Preserves Order",
+        description:
+          "When a line repeats, only the first time it appears is kept, and every remaining line stays in its original relative order.",
+      },
+      {
+        title: "Optional Whitespace & Empty Line Handling",
+        description:
+          'Turn on "Trim whitespace" to treat lines that differ only by leading or trailing spaces as duplicates, or "Ignore empty lines" to strip blank lines entirely.',
+      },
+      {
+        title: "Live Statistics",
+        description:
+          "See Input Lines, Output Lines, and Duplicate Lines Removed update in real time as you edit your text.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Everything runs locally in your browser. Your text is never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste your text",
+        description: "Add the text you want to deduplicate into the input box.",
+      },
+      {
+        title: "Choose your options",
+        description:
+          'Optionally enable "Ignore empty lines" or "Trim whitespace" before lines are compared.',
+      },
+      {
+        title: "Review the live result",
+        description:
+          "Duplicate lines are removed instantly, and the line-count stats update as you type.",
+      },
+      {
+        title: "Copy or clear",
+        description:
+          "Copy the cleaned text with one click, or clear both fields to start over.",
+      },
+    ],
+    example: {
+      title: "Removing Duplicate Emails from a List",
+      input: "alice@example.com\nbob@example.com\nalice@example.com\ncarol@example.com\nbob@example.com",
+      output: "alice@example.com\nbob@example.com\ncarol@example.com",
+    },
+    useCases: [
+      {
+        title: "Cleaning Email & Contact Lists",
+        description:
+          "Remove repeated email addresses or names before importing a list into a CRM or mailing tool.",
+      },
+      {
+        title: "Deduplicating Data Exports",
+        description:
+          "Clean up duplicate rows, IDs, or values copied from spreadsheets, logs, or database exports.",
+      },
+      {
+        title: "Tidying Keyword & Tag Lists",
+        description:
+          "Remove duplicate keywords, tags, or hashtags before using them in SEO or content tools.",
+      },
+      {
+        title: "Simplifying Code & Config Lists",
+        description:
+          "Strip duplicate lines from import statements, dependency lists, or configuration files.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Does this tool preserve the order of my original text?",
+        answer:
+          "Yes. When a line repeats, only its first occurrence is kept, and every remaining line stays in its original position relative to the others.",
+      },
+      {
+        question: "Can I remove duplicates while ignoring blank lines?",
+        answer:
+          'Yes. Turn on "Ignore empty lines" to strip every blank line from the output, no matter how many appear in your original text.',
+      },
+      {
+        question: 'Will "  Apple" and "Apple" be treated as duplicates?',
+        answer:
+          'Only if you enable "Trim whitespace" — this treats lines that differ only by leading or trailing spaces as the same line before comparing them.',
+      },
+      {
+        question: "Is duplicate detection case-sensitive?",
+        answer:
+          'Yes, comparison is always case-sensitive, so "Apple" and "apple" are treated as two different lines. There\'s currently no option to ignore case.',
+      },
+      {
+        question: "What do the Input Lines, Output Lines, and Duplicates Removed stats mean?",
+        answer:
+          "Input Lines is the total number of lines you pasted, Output Lines is how many remain after deduplication, and Duplicates Removed is how many repeated lines were stripped out.",
+      },
+      {
+        question: "Is my text uploaded to a server?",
+        answer:
+          "No. Deduplication happens entirely in your browser. Your text is never sent to a server or stored.",
+      },
+    ],
+    relatedTools: [
+      "/tools/text-sorter",
+      "/tools/case-converter",
+      "/tools/word-counter",
+    ],
+  },
 }

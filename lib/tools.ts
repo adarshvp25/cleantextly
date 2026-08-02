@@ -1,0 +1,55 @@
+import type { LucideIcon } from "lucide-react"
+import { ArrowDownAZ, Braces, CaseSensitive, CopyX, FileSpreadsheet, Hash } from "lucide-react"
+
+export type Tool = {
+  name: string
+  description: string
+  icon: LucideIcon
+  href: string
+  comingSoon?: boolean
+}
+
+export const tools: Tool[] = [
+  {
+    name: "Remove Duplicate Lines",
+    description: "Delete repeated lines from any block of text.",
+    icon: CopyX,
+    href: "/tools/remove-duplicate-lines",
+    comingSoon: true,
+  },
+  {
+    name: "JSON Formatter",
+    description: "Beautify and validate JSON right in your browser.",
+    icon: Braces,
+    href: "/tools/json-formatter",
+    comingSoon: true,
+  },
+  {
+    name: "Case Converter",
+    description: "Switch between upper, lower, and title case instantly.",
+    icon: CaseSensitive,
+    href: "/tools/case-converter",
+    comingSoon: true,
+  },
+  {
+    name: "Text Sorter",
+    description: "Sort lines alphabetically or numerically.",
+    icon: ArrowDownAZ,
+    href: "/tools/text-sorter",
+    comingSoon: true,
+  },
+  {
+    name: "CSV to JSON",
+    description: "Convert CSV data into clean, structured JSON.",
+    icon: FileSpreadsheet,
+    href: "/tools/csv-to-json",
+    comingSoon: true,
+  },
+  {
+    name: "Word Counter",
+    description: "Count words, characters, and sentences fast.",
+    icon: Hash,
+    href: "/tools/word-counter",
+    comingSoon: true,
+  },
+]

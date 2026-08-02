@@ -612,4 +612,123 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/word-counter",
     ],
   },
+  "/tools/word-counter": {
+    introduction:
+      "CleanTextly's Word Counter gives you a live breakdown of any text — words, characters (with and without spaces), lines, paragraphs, sentences, and an estimated reading time — updating instantly as you type. Paste an essay, an email draft, or a social media post, and every statistic recalculates in real time, entirely in your browser, with nothing uploaded or stored.",
+    features: [
+      {
+        title: "7 Live Statistics",
+        description:
+          "See word count, character count (with and without spaces), lines, paragraphs, sentences, and estimated reading time all at once.",
+      },
+      {
+        title: "Instant Updates",
+        description:
+          "Every statistic recalculates live as you type or paste — there's nothing to click or run.",
+      },
+      {
+        title: "Accurate Reading Time",
+        description:
+          "Estimated reading time is calculated at 200 words per minute and rounded up to the nearest minute.",
+      },
+      {
+        title: "Smart Sentence & Paragraph Detection",
+        description:
+          'Repeated punctuation like "..." or "!!!" counts as a single sentence ending, and consecutive blank lines count as one paragraph break.',
+      },
+      {
+        title: "100% Private",
+        description:
+          "Everything runs locally in your browser. Your text is never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste or type your text",
+        description: "Add the text you want to analyze into the input box.",
+      },
+      {
+        title: "Watch the stats update live",
+        description:
+          "All seven statistics recalculate instantly as you type — there's no button to click.",
+      },
+      {
+        title: "Copy your text",
+        description:
+          "Copy the original input text back to your clipboard with one click, if needed.",
+      },
+      {
+        title: "Clear to start over",
+        description: "Clear the input to reset every statistic back to zero.",
+      },
+    ],
+    example: {
+      title: "Analyzing a Short Paragraph",
+      inputLabel: "Sample Text",
+      outputLabel: "Live Statistics",
+      input:
+        "CleanTextly is a free, browser-based text tool. It works instantly and requires no sign-up.",
+      output:
+        "Words: 14\nCharacters: 91\nCharacters (No Spaces): 78\nLines: 1\nParagraphs: 1\nSentences: 2\nReading Time: 1 min",
+    },
+    useCases: [
+      {
+        title: "Meeting Word Count Requirements",
+        description:
+          "Check essays, articles, or assignments against word count minimums or maximums before submitting.",
+      },
+      {
+        title: "Estimating Reading Time",
+        description:
+          "Get a quick reading-time estimate for blog posts, emails, or scripts before publishing.",
+      },
+      {
+        title: "Checking Character Limits",
+        description:
+          "Verify text fits within character limits for social media posts, meta descriptions, or form fields.",
+      },
+      {
+        title: "Analyzing Writing Structure",
+        description:
+          "Use sentence and paragraph counts to spot overly long paragraphs or run-on sentences.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How is reading time calculated?",
+        answer:
+          "Reading time is estimated at 200 words per minute and always rounded up, so even a single word shows a 1-minute estimate.",
+      },
+      {
+        question: "What counts as a sentence?",
+        answer:
+          'A sentence ends with one or more of . ! or ? — repeated punctuation like "..." or "!!!" still counts as a single sentence ending, not several.',
+      },
+      {
+        question: "How are paragraphs counted?",
+        answer:
+          "A new paragraph starts after one or more blank lines. Lines grouped together with no blank line between them count as a single paragraph.",
+      },
+      {
+        question: "What's the difference between Characters and Characters (No Spaces)?",
+        answer:
+          "Characters counts every character exactly as typed, including spaces, tabs, and line breaks. Characters (No Spaces) removes all whitespace before counting.",
+      },
+      {
+        question: "Does the Copy button copy my original text or the statistics?",
+        answer:
+          "It copies your original input text — the statistics are just a live summary and aren't included in what's copied.",
+      },
+      {
+        question: "Is my text uploaded to a server?",
+        answer:
+          "No. All counting happens entirely in your browser. Your text is never sent to a server or stored.",
+      },
+    ],
+    relatedTools: [
+      "/tools/text-sorter",
+      "/tools/case-converter",
+      "/tools/remove-duplicate-lines",
+    ],
+  },
 }

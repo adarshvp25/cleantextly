@@ -378,4 +378,120 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/word-counter",
     ],
   },
+  "/tools/text-sorter": {
+    introduction:
+      "CleanTextly's Text Sorter reorders any list of lines — alphabetically or numerically, ascending or descending — right in your browser. Paste a list of names, scores, or reference data, pick a sort mode, and the result updates instantly. Duplicate lines are always preserved and nothing you paste is ever uploaded, so it's just as safe for a spreadsheet export as it is for a personal list.",
+    features: [
+      {
+        title: "4 Sort Modes",
+        description:
+          "Sort lines Alphabetically (A → Z), Reverse Alphabetically (Z → A), or Numerically in ascending or descending order.",
+      },
+      {
+        title: "Live Sorting",
+        description:
+          "Output updates instantly as you type, paste, or change the sort mode — there's no button you have to click to see the result.",
+      },
+      {
+        title: "Stable, Predictable Order",
+        description:
+          "Lines that compare equal keep their original relative order, and duplicate lines are always preserved rather than removed.",
+      },
+      {
+        title: "Flexible Sorting Options",
+        description:
+          'Optionally remove empty lines, trim whitespace before comparing, or turn on "Case sensitive" sorting.',
+      },
+      {
+        title: "100% Private",
+        description:
+          "Everything runs locally in your browser. Your text is never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste your text",
+        description: "Add the list or lines you want to sort into the input box.",
+      },
+      {
+        title: "Choose a sort mode",
+        description:
+          "Select Alphabetical, Reverse Alphabetical, or Numeric (Ascending or Descending) from the Sort Mode dropdown.",
+      },
+      {
+        title: "Adjust the options",
+        description:
+          'Optionally enable "Remove empty lines", "Trim whitespace before sorting", or "Case sensitive".',
+      },
+      {
+        title: "Copy or clear",
+        description:
+          "The sorted result appears instantly — copy it with one click, or clear both fields to start over.",
+      },
+    ],
+    example: {
+      title: "Sorting a List Alphabetically",
+      input: "Banana\nApple\nOrange\nMango",
+      output: "Apple\nBanana\nMango\nOrange",
+    },
+    useCases: [
+      {
+        title: "Alphabetizing Lists",
+        description:
+          "Sort names, product titles, or reference lists into a clean A → Z or Z → A order.",
+      },
+      {
+        title: "Ranking Numeric Data",
+        description:
+          'Sort scores, prices, or IDs numerically, so values compare correctly instead of as text (where "10" would come before "2").',
+      },
+      {
+        title: "Preparing Data for Import",
+        description:
+          "Order rows or values before pasting them into a spreadsheet, database, or CMS.",
+      },
+      {
+        title: "Organizing Reference Material",
+        description:
+          "Sort glossary terms, tags, or keyword lists for easier scanning and lookup.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What's the difference between Alphabetical and Numeric sorting?",
+        answer:
+          'Alphabetical sorting compares lines as text, so "10" would come before "2". Numeric sorting compares them as numbers, so "2" correctly comes before "10".',
+      },
+      {
+        question: "What happens to non-numeric lines in Numeric mode?",
+        answer:
+          "Lines that aren't valid numbers are moved to the end of the result, keeping their original relative order, while the numeric lines are sorted normally.",
+      },
+      {
+        question: "Does sorting remove duplicate lines?",
+        answer:
+          "No. Duplicate lines are kept exactly as they appear — this tool only reorders lines. If you also want duplicates removed, try the Remove Duplicate Lines tool.",
+      },
+      {
+        question: "Is sorting case-sensitive?",
+        answer:
+          'Only if you enable "Case sensitive". By default, sorting ignores case, so "apple" and "Apple" are treated the same for ordering purposes.',
+      },
+      {
+        question: "Will lines that compare equal keep their original order?",
+        answer:
+          "Yes. The sort is stable, so when two lines are equal — such as identical duplicate lines — they stay in the same relative order as your original text.",
+      },
+      {
+        question: "Is my text uploaded to a server?",
+        answer:
+          "No. Sorting happens entirely in your browser. Your text is never sent to a server or stored.",
+      },
+    ],
+    relatedTools: [
+      "/tools/remove-duplicate-lines",
+      "/tools/case-converter",
+      "/tools/word-counter",
+    ],
+  },
 }

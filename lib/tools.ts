@@ -33,7 +33,6 @@ export const tools: Tool[] = [
     description: "Sort lines alphabetically or numerically.",
     icon: ArrowDownAZ,
     href: "/tools/text-sorter",
-    comingSoon: true,
   },
   {
     name: "CSV to JSON",

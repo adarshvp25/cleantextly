@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 
 import { CsvToJsonTool } from "@/components/tools/csv-to-json-tool"
+import { ToolContentSections } from "@/components/tools/content/tool-content-sections"
+import { toolContent } from "@/lib/tools/content"
 
 export const metadata: Metadata = {
   title: "CSV to JSON Converter — CleanTextly",
@@ -9,6 +11,8 @@ export const metadata: Metadata = {
 }
 
 export default function CsvToJsonPage() {
+  const content = toolContent["/tools/csv-to-json"]
+
   return (
     <main className="flex flex-1 flex-col bg-background">
       <section className="mx-auto w-full max-w-5xl px-4 py-12 sm:py-16">
@@ -24,6 +28,12 @@ export default function CsvToJsonPage() {
         <div className="mt-10">
           <CsvToJsonTool />
         </div>
+
+        {content && (
+          <div className="mt-16 border-t border-border pt-16">
+            <ToolContentSections content={content} />
+          </div>
+        )}
       </section>
     </main>
   )

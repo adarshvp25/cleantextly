@@ -494,4 +494,122 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/word-counter",
     ],
   },
+  "/tools/csv-to-json": {
+    introduction:
+      "CleanTextly's CSV to JSON Converter turns CSV data into clean, formatted JSON right in your browser. The first row is treated as the header, and every other row becomes one JSON object — quoted fields, commas inside quotes, and escaped double quotes are all handled correctly. Paste a spreadsheet export or a hand-written CSV, and the result updates instantly, with a clear error message if anything is malformed.",
+    features: [
+      {
+        title: "Instant Conversion",
+        description:
+          "CSV is parsed and converted to formatted JSON live as you type or paste — there's no button you have to click to see the result.",
+      },
+      {
+        title: "Handles Quoted & Escaped Values",
+        description:
+          'Correctly parses quoted fields, commas inside quotes, and escaped double quotes ("") within a value.',
+      },
+      {
+        title: "Clear Error Messages",
+        description:
+          'Malformed CSV shows a clear "Invalid CSV format." message instead of silently producing broken output.',
+      },
+      {
+        title: "Smart Column Handling",
+        description:
+          "Rows with missing columns get empty string values automatically, and extra columns beyond the header are ignored.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Everything runs locally in your browser. Your CSV data is never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste your CSV",
+        description:
+          "Add the CSV data you want to convert into the input box. The first row is treated as the header.",
+      },
+      {
+        title: "Check the validation status",
+        description:
+          "A clear error message appears instantly if the CSV is malformed, such as an unterminated quote.",
+      },
+      {
+        title: "Review the formatted JSON",
+        description:
+          "Valid CSV is converted into a pretty-printed JSON array of objects automatically as you type.",
+      },
+      {
+        title: "Copy or clear",
+        description:
+          "Copy the JSON result with one click, or clear both fields to start over.",
+      },
+    ],
+    example: {
+      title: "Converting a Contact List",
+      input: "name,email,city\nJohn,john@example.com,London\nAlice,alice@example.com,Paris",
+      output:
+        '[\n  {\n    "name": "John",\n    "email": "john@example.com",\n    "city": "London"\n  },\n  {\n    "name": "Alice",\n    "email": "alice@example.com",\n    "city": "Paris"\n  }\n]',
+    },
+    useCases: [
+      {
+        title: "Migrating Spreadsheet Data",
+        description:
+          "Turn a CSV export from Excel or Google Sheets into JSON for use in an app or API.",
+      },
+      {
+        title: "Preparing Test Fixtures",
+        description:
+          "Quickly convert sample CSV data into JSON objects for testing or prototyping.",
+      },
+      {
+        title: "Feeding Data into JavaScript Apps",
+        description:
+          "Convert CSV files into ready-to-use JSON arrays for frontend or Node.js projects.",
+      },
+      {
+        title: "Cleaning Up Exported Reports",
+        description:
+          "Turn CSV reports from analytics tools or databases into structured, readable JSON.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What happens to blank lines in my CSV?",
+        answer:
+          "Blank lines — including ones with only spaces or tabs — are ignored automatically and never produce empty JSON objects.",
+      },
+      {
+        question: "What if a row has fewer columns than the header?",
+        answer:
+          "Missing values are filled in as empty strings, so every object in the output always has the same set of keys.",
+      },
+      {
+        question: "What if a row has more columns than the header?",
+        answer:
+          "Extra columns beyond the header are ignored and don't appear in the output.",
+      },
+      {
+        question: "Does it support commas and quotes inside a field?",
+        answer:
+          'Yes. Wrap a value in double quotes to include commas, and use two double quotes ("") inside a quoted field to represent a single literal quote.',
+      },
+      {
+        question: "What happens if my CSV is malformed?",
+        answer:
+          'You\'ll see a clear "Invalid CSV format." message — for example, if a quoted field is never closed.',
+      },
+      {
+        question: "Is my CSV data uploaded anywhere?",
+        answer:
+          "No. Conversion happens entirely in your browser. Your CSV is never sent to a server or stored.",
+      },
+    ],
+    relatedTools: [
+      "/tools/json-formatter",
+      "/tools/remove-duplicate-lines",
+      "/tools/word-counter",
+    ],
+  },
 }

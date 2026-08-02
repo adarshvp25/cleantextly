@@ -45,6 +45,5 @@ export const tools: Tool[] = [
     description: "Count words, characters, and sentences fast.",
     icon: Hash,
     href: "/tools/word-counter",
-    comingSoon: true,
   },
 ]

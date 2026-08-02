@@ -9,7 +9,7 @@ The goal is to build the fastest, cleanest and most useful collection of text to
 
 ## Tech Stack
 
-- Next.js (App Router)
+- Next.js (App Router)git add .
 - TypeScript
 - Tailwind CSS
 - shadcn/ui

@@ -261,4 +261,121 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/word-counter",
     ],
   },
+  "/tools/json-formatter": {
+    introduction:
+      "CleanTextly's JSON Formatter validates and pretty-prints JSON right in your browser, with clear, specific error messages when something's wrong. Paste a minified API response, a config file, or hand-written JSON, and it's instantly checked for valid syntax and reformatted with consistent 2-space indentation — no upload, no signup, and nothing ever leaves your browser.",
+    features: [
+      {
+        title: "Instant Formatting",
+        description:
+          "JSON is validated and pretty-printed live as you type or paste — there's no button you have to click to see the result.",
+      },
+      {
+        title: "Clear Error Messages",
+        description:
+          "Invalid JSON shows a specific, actionable error message instead of a generic failure, so you know exactly what to fix.",
+      },
+      {
+        title: "Consistent 2-Space Indentation",
+        description:
+          "Output is always pretty-printed with 2-space indentation, the most common formatting convention for JSON.",
+      },
+      {
+        title: "Valid JSON Indicator",
+        description:
+          "A simple checkmark confirms your JSON is syntactically valid as soon as it parses successfully.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Everything runs locally in your browser. Your JSON is never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste your JSON",
+        description: "Add the JSON you want to format into the input box.",
+      },
+      {
+        title: "Check the validation status",
+        description:
+          'A "Valid JSON" checkmark appears instantly, or a clear error message if the syntax is invalid.',
+      },
+      {
+        title: "Review the formatted output",
+        description:
+          "Valid JSON is pretty-printed with 2-space indentation automatically as you type.",
+      },
+      {
+        title: "Copy or clear",
+        description:
+          "Copy the formatted result with one click, or clear both fields to start over.",
+      },
+    ],
+    example: {
+      title: "Formatting a Minified API Response",
+      input: '{"id":101,"name":"Jordan Lee","active":true,"roles":["admin","editor"]}',
+      output:
+        '{\n  "id": 101,\n  "name": "Jordan Lee",\n  "active": true,\n  "roles": [\n    "admin",\n    "editor"\n  ]\n}',
+    },
+    useCases: [
+      {
+        title: "Debugging API Responses",
+        description:
+          "Paste a minified or raw API response to instantly see its structure and spot formatting mistakes.",
+      },
+      {
+        title: "Reviewing Config Files",
+        description:
+          "Format compact config files like package.json or tsconfig.json for easier reading and review.",
+      },
+      {
+        title: "Validating Hand-Written JSON",
+        description:
+          "Catch missing commas, unclosed brackets, or malformed quotes before using JSON in your code.",
+      },
+      {
+        title: "Cleaning Up Logs & Exports",
+        description:
+          "Turn single-line JSON log entries or database exports into a readable, structured format.",
+      },
+    ],
+    faqs: [
+      {
+        question: 'What does the "Valid JSON" indicator mean?',
+        answer:
+          "It appears as soon as your input parses successfully as JSON, confirming the syntax is valid before you copy it or use it elsewhere.",
+      },
+      {
+        question: "What kind of error message will I see for invalid JSON?",
+        answer:
+          "The tool shows the browser's own JSON parsing error, which typically points to where parsing failed and describes what went wrong, such as a missing comma or an unexpected token.",
+      },
+      {
+        question: "Can I change the indentation width?",
+        answer:
+          "Not currently — output is always formatted with 2-space indentation, the most common convention for JSON.",
+      },
+      {
+        question: "Does formatting change the order of my JSON keys?",
+        answer:
+          "No. Keys are kept in the exact order they appear in your input; only whitespace and line breaks are added.",
+      },
+      {
+        question: "Does it support nested objects and arrays?",
+        answer:
+          "Yes. Any valid JSON structure — nested objects, arrays, numbers, strings, booleans, and null — is parsed and formatted correctly, no matter how deeply nested.",
+      },
+      {
+        question: "Will my JSON be uploaded anywhere?",
+        answer:
+          "No. Formatting and validation happen entirely in your browser. Your JSON is never sent to a server or stored.",
+      },
+    ],
+    relatedTools: [
+      "/tools/csv-to-json",
+      "/tools/remove-duplicate-lines",
+      "/tools/word-counter",
+    ],
+  },
 }

@@ -21,7 +21,6 @@ export const tools: Tool[] = [
     description: "Beautify and validate JSON right in your browser.",
     icon: Braces,
     href: "/tools/json-formatter",
-    comingSoon: true,
   },
   {
     name: "Case Converter",

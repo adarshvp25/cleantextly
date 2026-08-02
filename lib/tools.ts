@@ -15,7 +15,6 @@ export const tools: Tool[] = [
     description: "Delete repeated lines from any block of text.",
     icon: CopyX,
     href: "/tools/remove-duplicate-lines",
-    comingSoon: true,
   },
   {
     name: "JSON Formatter",

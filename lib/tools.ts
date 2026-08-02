@@ -39,7 +39,6 @@ export const tools: Tool[] = [
     description: "Convert CSV data into clean, structured JSON.",
     icon: FileSpreadsheet,
     href: "/tools/csv-to-json",
-    comingSoon: true,
   },
   {
     name: "Word Counter",

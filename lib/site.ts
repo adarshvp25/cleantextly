@@ -10,7 +10,7 @@ export const siteConfig = {
   navLinks: [
     { label: "Home", href: "/" },
     { label: "Tools", href: "/tools" },
-    { label: "Categories", href: "/categories", disabled: true },
+    { label: "Categories", href: "/categories" },
     { label: "About", href: "/about", disabled: true },
     { label: "Contact", href: "/contact", disabled: true },
   ] satisfies NavLink[],

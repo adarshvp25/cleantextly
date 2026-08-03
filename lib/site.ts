@@ -9,7 +9,7 @@ export const siteConfig = {
   description: "Fast browser-based text utilities.",
   navLinks: [
     { label: "Home", href: "/" },
-    { label: "Tools", href: "/tools", disabled: true },
+    { label: "Tools", href: "/tools" },
     { label: "Categories", href: "/categories", disabled: true },
     { label: "About", href: "/about", disabled: true },
     { label: "Contact", href: "/contact", disabled: true },

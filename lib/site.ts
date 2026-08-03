@@ -12,7 +12,7 @@ export const siteConfig = {
     { label: "Tools", href: "/tools" },
     { label: "Categories", href: "/categories" },
     { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact", disabled: true },
+    { label: "Contact", href: "/contact" },
   ] satisfies NavLink[],
 }
 

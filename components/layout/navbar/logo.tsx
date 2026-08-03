@@ -1,14 +1,17 @@
+import Image from "next/image"
 import Link from "next/link"
-
-import { siteConfig } from "@/lib/site"
 
 export function Logo() {
   return (
-    <Link
-      href="/"
-      className="text-lg font-semibold tracking-tight text-foreground"
-    >
-      {siteConfig.name}
+    <Link href="/" className="flex items-center">
+      <Image
+        src="/images/logo.png"
+        alt="CleanTextly"
+        width={1774}
+        height={887}
+        priority
+        className="h-10 w-auto md:h-12"
+      />
     </Link>
   )
 }

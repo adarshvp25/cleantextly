@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, ogImage } from "@/lib/site";
 import { Navbar } from "@/components/layout/navbar/navbar";
 
 const geistSans = Geist({
@@ -18,6 +18,24 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://cleantextly.com"),
   title: siteConfig.name,
   description: siteConfig.description,
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+  openGraph: {
+    siteName: siteConfig.name,
+    type: "website",
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [ogImage.url],
+  },
 };
 
 export default function RootLayout({

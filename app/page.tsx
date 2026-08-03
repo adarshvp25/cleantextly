@@ -8,7 +8,7 @@ import { FeatureList } from "@/components/tools/content/feature-list";
 import { StepGuide } from "@/components/tools/content/step-guide";
 import { FaqSection } from "@/components/tools/content/faq-section";
 import { tools } from "@/lib/tools";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, ogImage } from "@/lib/site";
 import { benefits, howItWorks, useCases, homeFaqs } from "@/lib/home-content";
 
 const badges = ["No Login", "Privacy First", "Fast", "Browser-based"];
@@ -29,11 +29,13 @@ export const metadata: Metadata = {
     url: "/",
     siteName: siteConfig.name,
     type: "website",
+    images: [ogImage],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title,
     description,
+    images: [ogImage.url],
   },
 };
 

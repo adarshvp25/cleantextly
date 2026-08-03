@@ -40,7 +40,7 @@ export function NavLink({ link, onNavigate, className }: NavLinkProps) {
       onClick={onNavigate}
       aria-current={isActive ? "page" : undefined}
       className={cn(
-        "transition-colors hover:text-foreground",
+        "rounded-sm outline-none transition-colors hover:text-foreground focus-visible:ring-3 focus-visible:ring-ring/50",
         isActive ? "text-foreground font-medium" : "text-muted-foreground",
         className
       )}

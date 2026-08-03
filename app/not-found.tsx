@@ -10,7 +10,13 @@ export const metadata: Metadata = {
   title: "404 – Page Not Found | CleanTextly",
   description:
     "The page you're looking for doesn't exist. Browse CleanTextly's free online text tools.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 }
+
+const popularTools = tools.slice(0, 3)
 
 export default function NotFound() {
   return (
@@ -23,21 +29,22 @@ export default function NotFound() {
           Page Not Found
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-          The page you are looking for does not exist or may have moved.
+          The page you&apos;re looking for doesn&apos;t exist or may have been
+          moved.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button render={<Link href="/" />} nativeButton={false} size="lg">
-            Go Home
+            Back to Home
           </Button>
 
           <Button
-            render={<Link href="/#tools" />}
+            render={<Link href="/tools" />}
             nativeButton={false}
             variant="secondary"
             size="lg"
           >
-            Browse Tools
+            Browse All Tools
           </Button>
         </div>
       </section>
@@ -50,7 +57,7 @@ export default function NotFound() {
           <SectionHeading id="popular-tools-heading" title="Popular Tools" />
 
           <div className="mt-12">
-            <ToolGrid tools={tools} />
+            <ToolGrid tools={popularTools} />
           </div>
         </div>
       </section>

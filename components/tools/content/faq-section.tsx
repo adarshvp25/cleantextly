@@ -34,7 +34,7 @@ export function FaqSection({ faqs }: { faqs: ToolFaq[] }) {
           key={faq.question}
           className="rounded-xl border border-border bg-card p-4"
         >
-          <Collapsible.Trigger className="group flex w-full items-center justify-between gap-4 rounded-md text-left font-medium text-card-foreground outline-none focus-visible:ring-3 focus-visible:ring-ring/50">
+          <Collapsible.Trigger className="group flex w-full cursor-pointer items-center justify-between gap-4 rounded-md text-left font-medium text-card-foreground outline-none focus-visible:ring-3 focus-visible:ring-ring/50">
             {faq.question}
             <ChevronDown
               aria-hidden="true"

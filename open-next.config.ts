@@ -1,5 +1,10 @@
 import { defineCloudflareConfig } from "@opennextjs/cloudflare";
+import r2IncrementalCache from "@opennextjs/cloudflare/overrides/incremental-cache/r2-incremental-cache";
 
-// CleanTextly is fully statically prerendered (no ISR/revalidation), so the
-// default in-memory incremental cache is sufficient — no R2 bucket needed.
-export default defineCloudflareConfig();
+// Matches the official OpenNext Cloudflare production template: an R2-backed
+// incremental cache so prerendered pages (and RSC/Flight payloads) are served
+// from cache instead of being re-rendered on every request, including the
+// automatic background RSC prefetches Next.js fires for every visible <Link>.
+export default defineCloudflareConfig({
+  incrementalCache: r2IncrementalCache,
+});

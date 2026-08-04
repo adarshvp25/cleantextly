@@ -35,7 +35,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center gap-2 border-t border-border pt-8 text-center text-sm text-muted-foreground sm:flex-row sm:justify-between sm:text-left">
-          <p>© {year} CleanTextly. All rights reserved.</p>
+          <p>© {year} CleanTextly. All rights reserved. Test</p>
           <p>Built for developers, writers, students, and professionals.</p>
         </div>
       </div>

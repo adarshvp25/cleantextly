@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "CSV to JSON Converter — CleanTextly",
   description:
     "Convert CSV into formatted JSON online for free. Fast, private, browser-based and no sign-up required.",
+  alternates: {
+    canonical: "/tools/csv-to-json",
+  },
 }
 
 export default function CsvToJsonPage() {

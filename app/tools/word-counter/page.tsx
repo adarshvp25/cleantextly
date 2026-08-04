@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Word Counter — CleanTextly",
   description:
     "Count words, characters, sentences, paragraphs, lines and estimated reading time online for free. Fast, private and browser-based.",
+  alternates: {
+    canonical: "/tools/word-counter",
+  },
 }
 
 export default function WordCounterPage() {

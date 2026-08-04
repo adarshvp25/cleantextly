@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Case Converter — CleanTextly",
   description:
     "Convert text between uppercase, lowercase, title case, sentence case, camelCase, PascalCase, snake_case and kebab-case online for free. Fast, private and browser-based.",
+  alternates: {
+    canonical: "/tools/case-converter",
+  },
 }
 
 export default function CaseConverterPage() {

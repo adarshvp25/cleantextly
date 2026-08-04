@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "JSON Formatter — CleanTextly",
   description:
     "Format, validate, and pretty-print JSON online for free. Fast, private, browser-based — no sign-up required.",
+  alternates: {
+    canonical: "/tools/json-formatter",
+  },
 }
 
 export default function JsonFormatterPage() {

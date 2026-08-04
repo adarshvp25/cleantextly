@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Remove Duplicate Lines — CleanTextly",
   description:
     "Remove duplicate lines from any text online for free. Fast, private, browser-based — no sign-up required.",
+  alternates: {
+    canonical: "/tools/remove-duplicate-lines",
+  },
 }
 
 export default function RemoveDuplicateLinesPage() {

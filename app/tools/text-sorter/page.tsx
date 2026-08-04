@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Text Sorter — CleanTextly",
   description:
     "Sort text alphabetically, numerically, ascending or descending online for free. Fast, private and browser-based.",
+  alternates: {
+    canonical: "/tools/text-sorter",
+  },
 }
 
 export default function TextSorterPage() {

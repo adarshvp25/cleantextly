@@ -5,6 +5,7 @@ import "./globals.css";
 import { siteConfig, ogImage } from "@/lib/site";
 import { Navbar } from "@/components/layout/navbar/navbar";
 import { Footer } from "@/components/layout/footer/footer";
+import { ClarityProvider } from "@/components/analytics/clarity-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,6 +52,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth scroll-pt-14 antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <ClarityProvider />
         <Navbar />
         {children}
         <Footer />

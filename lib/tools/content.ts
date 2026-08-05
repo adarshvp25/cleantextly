@@ -731,4 +731,125 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/remove-duplicate-lines",
     ],
   },
+  "/tools/character-counter": {
+    introduction:
+      "CleanTextly's Character Counter gives you a complete, live breakdown of any text — characters with and without spaces, letters, numbers, whitespace, words, sentences, paragraphs, lines, reading time, speaking time, and an estimated page count — all updating instantly as you type. Paste a tweet, a meta description, an essay, or a form field's contents, and every statistic recalculates in real time, entirely in your browser, with nothing uploaded or stored.",
+    features: [
+      {
+        title: "12 Live Statistics",
+        description:
+          "See characters (with and without spaces), letters, numbers, whitespace, words, sentences, paragraphs, lines, reading time, speaking time, and estimated pages all at once.",
+      },
+      {
+        title: "Accurate Unicode Character Counting",
+        description:
+          "Emoji and other multi-byte characters are counted as a single character each, and letters are correctly recognized across scripts — including right-to-left languages like Arabic and Hebrew.",
+      },
+      {
+        title: "Instant Updates",
+        description:
+          "Every statistic recalculates live as you type or paste — there's nothing to click or run.",
+      },
+      {
+        title: "Reading & Speaking Time",
+        description:
+          "Reading time is estimated at 200 words per minute and speaking time at 130 words per minute, both rounded up to the nearest minute.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Everything runs locally in your browser. Your text is never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste or type your text",
+        description: "Add the text you want to analyze into the input box.",
+      },
+      {
+        title: "Watch the stats update live",
+        description:
+          "All twelve statistics recalculate instantly as you type — there's no button to click.",
+      },
+      {
+        title: "Copy, paste, or download",
+        description:
+          "Copy the text to your clipboard, paste directly from your clipboard into the box, or download it as a .txt file.",
+      },
+      {
+        title: "Clear to start over",
+        description: "Clear the input to reset every statistic back to zero.",
+      },
+    ],
+    example: {
+      title: "Analyzing a Short Sentence",
+      inputLabel: "Sample Text",
+      outputLabel: "Live Statistics",
+      input: "CleanTextly counts characters instantly. Try it now!",
+      output:
+        "Characters (With Spaces): 52\nCharacters (No Spaces): 46\nLetters: 44\nNumbers: 0\nWhitespace: 6\nWords: 7\nSentences: 2\nReading Time: 1 min\nSpeaking Time: 1 min\nEstimated Pages: 0",
+    },
+    useCases: [
+      {
+        title: "Meeting Character Limits",
+        description:
+          "Check tweets, SMS messages, meta descriptions, and form fields against strict character limits before submitting.",
+      },
+      {
+        title: "Writing SEO Titles & Descriptions",
+        description:
+          "Keep page titles and meta descriptions within the character counts search engines display in full.",
+      },
+      {
+        title: "Estimating Reading & Speaking Time",
+        description:
+          "Get a quick estimate of how long a script, speech, or article will take to read or deliver out loud.",
+      },
+      {
+        title: "Checking Multilingual & Emoji-Heavy Text",
+        description:
+          "Get an accurate character count for text mixing scripts, accented letters, and emoji — without the inflated counts other tools can produce.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Does this tool count emoji correctly?",
+        answer:
+          "Yes. Each emoji counts as a single character, even multi-byte ones that other tools sometimes count as two or more.",
+      },
+      {
+        question: "How is reading time calculated?",
+        answer:
+          "Reading time is estimated at 200 words per minute, and speaking time at 130 words per minute — both always rounded up, so even a single word shows a 1-minute estimate.",
+      },
+      {
+        question: "How is the estimated page count calculated?",
+        answer:
+          "Pages are estimated at 250 words per page, a common standard for double-spaced documents, shown to one decimal place.",
+      },
+      {
+        question: "What's the difference between Characters and Letters?",
+        answer:
+          "Characters counts every character exactly as typed, including numbers, punctuation, symbols, and spaces. Letters counts only alphabetic characters, in any script.",
+      },
+      {
+        question: "Does it handle right-to-left languages like Arabic or Hebrew?",
+        answer:
+          "Yes. Letters and characters in right-to-left scripts are counted correctly, the same as any other language.",
+      },
+      {
+        question: "Is my text uploaded to a server?",
+        answer:
+          "No. All counting happens entirely in your browser. Your text is never sent to a server or stored.",
+      },
+    ],
+    relatedTools: [
+      "/tools/word-counter",
+      "/tools/case-converter",
+      "/tools/text-sorter",
+      "/tools/remove-duplicate-lines",
+      "/tools/json-formatter",
+      "/tools/csv-to-json",
+    ],
+  },
 }

@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { ArrowDownAZ, Braces, CaseSensitive, CopyX, FileSpreadsheet, Hash } from "lucide-react"
+import { ArrowDownAZ, Braces, CaseSensitive, CopyX, FileSpreadsheet, Hash, Type } from "lucide-react"
 
 export type Tool = {
   name: string
@@ -51,6 +51,13 @@ export const tools: Tool[] = [
     description: "Count words, characters, and sentences fast.",
     icon: Hash,
     href: "/tools/word-counter",
+    category: "text-tools",
+  },
+  {
+    name: "Character Counter",
+    description: "Count characters, letters, words, and more in real time.",
+    icon: Type,
+    href: "/tools/character-counter",
     category: "text-tools",
   },
 ]

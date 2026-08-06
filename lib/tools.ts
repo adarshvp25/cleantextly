@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { ArrowDownAZ, Braces, CaseSensitive, CopyX, FileSpreadsheet, Hash, Type } from "lucide-react"
+import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, Hash, Type } from "lucide-react"
 
 export type Tool = {
   name: string
@@ -58,6 +58,13 @@ export const tools: Tool[] = [
     description: "Count characters, letters, words, and more in real time.",
     icon: Type,
     href: "/tools/character-counter",
+    category: "text-tools",
+  },
+  {
+    name: "Remove Empty Lines",
+    description: "Delete blank and whitespace-only lines from any text.",
+    icon: Eraser,
+    href: "/tools/remove-empty-lines",
     category: "text-tools",
   },
 ]

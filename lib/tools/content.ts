@@ -852,4 +852,120 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/csv-to-json",
     ],
   },
+  "/tools/remove-empty-lines": {
+    introduction:
+      "CleanTextly's Remove Empty Lines tool is a free online blank line remover that instantly deletes empty and whitespace-only lines from any block of text. Paste content with scattered blank lines — from a document export, a code file, or a list copied from somewhere else — and every completely empty line, along with lines containing only spaces or tabs, is removed automatically, while every other line keeps its exact original content and order.",
+    features: [
+      {
+        title: "Removes Blank & Whitespace-Only Lines",
+        description:
+          "Deletes completely empty lines as well as lines containing only spaces or tabs — a single pass handles both.",
+      },
+      {
+        title: "Instant, Live Processing",
+        description:
+          "Empty lines are removed as you type or paste — there's no button to click and no submit step.",
+      },
+      {
+        title: "Preserves Line Order & Exact Content",
+        description:
+          "Every remaining line keeps its original position and its exact original text — nothing is trimmed or rewritten.",
+      },
+      {
+        title: "Works With Any Line Ending",
+        description:
+          "Windows (CRLF), Mac (CR), and Unix (LF) line endings are all detected and handled correctly, even when mixed in the same file.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Everything runs locally in your browser. Your text is never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste your text",
+        description: "Add the text you want to clean up into the input box.",
+      },
+      {
+        title: "Watch empty lines disappear",
+        description:
+          "Blank and whitespace-only lines are removed instantly as you type — there's nothing to run.",
+      },
+      {
+        title: "Review the live statistics",
+        description:
+          "Input lines, output lines, and empty lines removed update in real time as you edit your text.",
+      },
+      {
+        title: "Copy, paste, or download",
+        description:
+          "Copy the cleaned result to your clipboard, paste directly from your clipboard into the box, or download it as a .txt file.",
+      },
+    ],
+    example: {
+      title: "Cleaning Up a Document With Scattered Blank Lines",
+      input: "First line.\n\n\nSecond line.\n   \nThird line.\n\t\nFourth line.",
+      output: "First line.\nSecond line.\nThird line.\nFourth line.",
+    },
+    useCases: [
+      {
+        title: "Cleaning Up Pasted Documents",
+        description:
+          "Remove blank lines left behind when copying text out of a Word document, PDF, or email into a plain-text field.",
+      },
+      {
+        title: "Tidying Code & Config Files",
+        description:
+          "Delete empty lines from source files, config files, or log exports to make them shorter and easier to scan.",
+      },
+      {
+        title: "Preparing Lists for Import",
+        description:
+          "Strip stray blank rows from a list of names, emails, or values before importing it into a spreadsheet or database.",
+      },
+      {
+        title: "Formatting Content for Publishing",
+        description:
+          "Delete empty lines online before pasting content into a CMS, markdown file, or documentation page.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Does this tool remove lines that only contain spaces or tabs?",
+        answer:
+          "Yes. Any line that's completely empty, or contains only spaces or tabs, is treated as a blank line and removed.",
+      },
+      {
+        question: "Will it change the content of my other lines?",
+        answer:
+          "No. Every line that isn't empty is kept exactly as written — this tool only deletes empty lines, it never trims or rewrites the lines you keep.",
+      },
+      {
+        question: "Does it preserve the order of my remaining lines?",
+        answer:
+          "Yes. Lines that survive keep the exact same relative order they had in your original text.",
+      },
+      {
+        question: "Does it work with Windows, Mac, and Unix line endings?",
+        answer:
+          "Yes. CRLF (Windows), CR (old Mac), and LF (Unix) line endings are all recognized correctly, even if a single file mixes more than one.",
+      },
+      {
+        question: "Can I use this as an online empty line remover for large files?",
+        answer:
+          "Yes. Processing happens instantly in your browser and comfortably handles large documents with tens of thousands of lines.",
+      },
+      {
+        question: "Is my text uploaded to a server?",
+        answer:
+          "No. All processing happens entirely in your browser. Your text is never sent to a server or stored.",
+      },
+    ],
+    relatedTools: [
+      "/tools/remove-duplicate-lines",
+      "/tools/text-sorter",
+      "/tools/character-counter",
+    ],
+  },
 }

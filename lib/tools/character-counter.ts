@@ -1,4 +1,5 @@
 import { analyzeText } from "@/lib/tools/word-counter"
+import { toCharacters } from "@/lib/tools/text-metrics"
 
 export type CharacterCountStats = {
   charactersWithSpaces: number
@@ -17,13 +18,6 @@ export type CharacterCountStats = {
 
 const WORDS_PER_PAGE = 250
 const SPEAKING_WORDS_PER_MINUTE = 130
-
-// Split by Unicode code point rather than UTF-16 code unit, so multi-unit
-// characters — most emoji, astral-plane symbols — count as one character
-// each instead of two.
-function toCharacters(input: string): string[] {
-  return Array.from(input)
-}
 
 // \p{L} matches a Unicode letter in any script, so accented Latin letters
 // and RTL scripts (Arabic, Hebrew, etc.) are counted correctly.

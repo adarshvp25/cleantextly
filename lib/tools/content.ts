@@ -968,4 +968,122 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/character-counter",
     ],
   },
+  "/tools/find-and-replace": {
+    introduction:
+      "CleanTextly's Find and Replace tool lets you find and replace text online instantly — paste your content, enter the text to find and what to replace it with, and every occurrence updates live as you type. Whether you're cleaning up a document, updating placeholder text, or fixing a recurring typo, this text replacer handles it in your browser with no waiting and nothing uploaded.",
+    features: [
+      {
+        title: "Instant, Live Replacement",
+        description:
+          "Every occurrence is replaced as you type — there's no button to click and no submit step.",
+      },
+      {
+        title: "Match Case & Match Whole Word",
+        description:
+          "Toggle case-sensitive matching, or restrict replacements to whole words so \"cat\" won't touch \"category\" or \"cats\".",
+      },
+      {
+        title: "Live Occurrence Counts",
+        description:
+          "See exactly how many matches were found and replaced, updating in real time as you refine your search.",
+      },
+      {
+        title: "Preserves Everything Else Exactly",
+        description:
+          "Every character outside your matches — spacing, indentation, line endings, Unicode, and emoji — is kept exactly as written.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Everything runs locally in your browser. Your text is never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste your text",
+        description: "Add the text you want to search into the Input box.",
+      },
+      {
+        title: "Enter what to find and replace",
+        description:
+          "Type the text to find and the text to replace it with — the output updates instantly.",
+      },
+      {
+        title: "Adjust match options if needed",
+        description:
+          'Enable "Match Case" for case-sensitive matching, or "Match Whole Word" to avoid partial-word matches.',
+      },
+      {
+        title: "Copy, paste, or download",
+        description:
+          "Copy the updated text to your clipboard, paste directly from your clipboard into the input, or download it as a .txt file.",
+      },
+    ],
+    example: {
+      title: "Replacing a Repeated Word",
+      inputLabel: "Input",
+      outputLabel: "Output",
+      input: "The cat sat next to the cat while another cat watched.",
+      output: "The dog sat next to the dog while another dog watched.",
+    },
+    useCases: [
+      {
+        title: "Updating Placeholder Text",
+        description:
+          "Replace placeholder names, dates, or values across a document or template in one pass.",
+      },
+      {
+        title: "Fixing Repeated Typos",
+        description:
+          "Correct a misspelled word or name everywhere it appears in a block of text at once.",
+      },
+      {
+        title: "Cleaning Up Copied Content",
+        description:
+          "Replace curly quotes, stray characters, or inconsistent terms after pasting text from another source.",
+      },
+      {
+        title: "Preparing Text for Publishing",
+        description:
+          "Swap out draft terminology, brand names, or formatting artifacts before publishing content.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How do I find and replace text online with this tool?",
+        answer:
+          'Paste your text into the Input box, type the text to find and what to replace it with, and every occurrence updates instantly — there\'s no "Replace" button to click.',
+      },
+      {
+        question: "What does Match Whole Word do?",
+        answer:
+          'When enabled, only standalone words are matched — searching for "cat" won\'t match "cats" or "category". It works correctly with accented letters and non-Latin scripts, not just plain English.',
+      },
+      {
+        question: "Is the search case-sensitive?",
+        answer:
+          'By default, no — "Cat" and "cat" are treated the same. Turn on "Match Case" to only replace text that matches the exact capitalization.',
+      },
+      {
+        question: "Does this text replacer support regular expressions?",
+        answer:
+          "Not yet. Regex support is planned for a future update — for now, the text you enter is always matched literally, so special characters like \".\" or \"$\" are treated as plain text.",
+      },
+      {
+        question: "Will it change anything other than my matches?",
+        answer:
+          "No. Every character outside of what you're replacing — spacing, line breaks, Unicode, and emoji — is preserved exactly as written.",
+      },
+      {
+        question: "Is my text uploaded to a server?",
+        answer:
+          "No. All find and replace processing happens entirely in your browser. Your text is never sent to a server or stored.",
+      },
+    ],
+    relatedTools: [
+      "/tools/remove-duplicate-lines",
+      "/tools/case-converter",
+      "/tools/remove-empty-lines",
+    ],
+  },
 }

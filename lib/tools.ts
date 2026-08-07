@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, Hash, Type } from "lucide-react"
+import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, Hash, ReplaceAll, Type } from "lucide-react"
 
 export type Tool = {
   name: string
@@ -65,6 +65,13 @@ export const tools: Tool[] = [
     description: "Delete blank and whitespace-only lines from any text.",
     icon: Eraser,
     href: "/tools/remove-empty-lines",
+    category: "text-tools",
+  },
+  {
+    name: "Find and Replace",
+    description: "Find and replace every occurrence of text instantly.",
+    icon: ReplaceAll,
+    href: "/tools/find-and-replace",
     category: "text-tools",
   },
 ]

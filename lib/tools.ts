@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, Hash, ReplaceAll, Type } from "lucide-react"
+import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, FoldHorizontal, Hash, ReplaceAll, Type } from "lucide-react"
 
 export type Tool = {
   name: string
@@ -72,6 +72,13 @@ export const tools: Tool[] = [
     description: "Find and replace every occurrence of text instantly.",
     icon: ReplaceAll,
     href: "/tools/find-and-replace",
+    category: "text-tools",
+  },
+  {
+    name: "Remove Extra Spaces",
+    description: "Collapse extra spaces and tabs while keeping line breaks.",
+    icon: FoldHorizontal,
+    href: "/tools/remove-extra-spaces",
     category: "text-tools",
   },
 ]

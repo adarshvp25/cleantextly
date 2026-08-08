@@ -1086,4 +1086,120 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/remove-empty-lines",
     ],
   },
+  "/tools/remove-extra-spaces": {
+    introduction:
+      "If you're looking to remove spaces from text, what you actually want is usually to remove the extra, repeated ones — not every space. CleanTextly's Remove Extra Spaces tool does exactly that, cleaning up messy whitespace online instantly. Paste in a paragraph, a pasted spreadsheet cell, or a block of copied text, and every run of repeated spaces or tabs collapses down to a single space as you type — while normal single spaces between words, and your line breaks, are left exactly as they were. This isn't a tool that strips every space from your text; it only removes the extra, unnecessary ones.",
+    features: [
+      {
+        title: "Collapses Extra & Multiple Spaces",
+        description:
+          "Any run of repeated spaces or tabs is reduced to a single space, so double- and triple-spaced text gets normalized automatically.",
+      },
+      {
+        title: "Keeps Normal Word Spacing Intact",
+        description:
+          "Single spaces between words are never touched — this tool removes extra spacing, not the spacing that makes your text readable.",
+      },
+      {
+        title: "Instant, Live Cleanup",
+        description:
+          "Extra spaces are removed as you type or paste — there's no button to click and no submit step.",
+      },
+      {
+        title: "Preserves Line Breaks & Paragraphs",
+        description:
+          "Blank lines and paragraph breaks are left exactly as written — only the spacing within each line is cleaned up.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Everything runs locally in your browser. Your text is never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste your text",
+        description: "Add the text you want to clean up into the Input box.",
+      },
+      {
+        title: "Watch extra spaces disappear",
+        description:
+          "Repeated spaces and tabs are collapsed instantly as you type — there's nothing to run.",
+      },
+      {
+        title: "Review the live statistics",
+        description:
+          "See exactly how many spaces were removed, along with character and word counts, updating in real time.",
+      },
+      {
+        title: "Copy, paste, or download",
+        description:
+          "Copy the cleaned text to your clipboard, paste directly from your clipboard into the input, or download it as a .txt file.",
+      },
+    ],
+    example: {
+      title: "Cleaning Up Text With Extra Spaces",
+      input: "Hello    world   this   is    CleanTextly",
+      output: "Hello world this is CleanTextly",
+    },
+    useCases: [
+      {
+        title: "Cleaning Text Copied From Documents",
+        description:
+          "Remove extra spaces left behind when copying text out of a Word document, PDF, or spreadsheet cell into a plain-text field.",
+      },
+      {
+        title: "Tidying Up Pasted Data",
+        description:
+          "Normalize inconsistent spacing in names, addresses, or values before importing them elsewhere.",
+      },
+      {
+        title: "Preparing Content for Publishing",
+        description:
+          "Clean up double-spaced or tab-separated text before pasting it into a CMS, markdown file, or documentation page.",
+      },
+      {
+        title: "Fixing Typing & Formatting Habits",
+        description:
+          "Normalize text that accumulated extra spaces from double-spacing after periods or inconsistent tab use.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Does this remove all the spaces from my text?",
+        answer:
+          "No. It only removes extra, repeated spaces and tabs — normal single spaces between words are always preserved so your text stays readable.",
+      },
+      {
+        question: "How do I remove extra spaces from text online?",
+        answer:
+          "Paste your text into the Input box. Every run of repeated spaces or tabs is collapsed to a single space automatically, with no button to click.",
+      },
+      {
+        question: "Does it handle multiple spaces and tabs the same way?",
+        answer:
+          "Yes. Both repeated spaces and tabs are treated as extra whitespace and collapsed to a single space, whether they appear on their own or mixed together.",
+      },
+      {
+        question: "Will it remove blank lines or merge my paragraphs?",
+        answer:
+          "No. This tool only cleans horizontal spacing within each line — blank lines and paragraph breaks are left untouched. Use the Remove Empty Lines tool if you also want to remove blank lines.",
+      },
+      {
+        question: "Can I use this to clean text copied from a spreadsheet?",
+        answer:
+          "Yes. Text copied from spreadsheets or documents often carries extra spaces, and this tool cleans that up like any other pasted text — right in your browser.",
+      },
+      {
+        question: "Is my text uploaded to a server?",
+        answer:
+          "No. All processing happens entirely in your browser. Your text is never sent to a server or stored.",
+      },
+    ],
+    relatedTools: [
+      "/tools/remove-empty-lines",
+      "/tools/remove-duplicate-lines",
+      "/tools/find-and-replace",
+    ],
+  },
 }

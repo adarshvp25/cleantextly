@@ -1202,4 +1202,120 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/find-and-replace",
     ],
   },
+  "/tools/remove-line-breaks": {
+    introduction:
+      "CleanTextly's Remove Line Breaks tool lets you remove line breaks from text online instantly, joining separate lines into one continuous paragraph. Paste in text copied from a PDF, a Word document, or anywhere else lines got split up, and every line break — LF, CRLF, or CR, however many in a row — is replaced with a single space as you type. This line break remover never joins words together without a space, and it never touches ordinary spacing elsewhere in your text.",
+    features: [
+      {
+        title: "Removes Every Line Break Style",
+        description:
+          "Unix (LF), Windows (CRLF), and old Mac (CR) line breaks are all detected and removed correctly, even when mixed in the same text.",
+      },
+      {
+        title: "Joins Lines Without Merging Words",
+        description:
+          "Each removed line break becomes a single space, so \"Hello\" and \"World\" on separate lines always come out as \"Hello World\", never \"HelloWorld\".",
+      },
+      {
+        title: "No Accidental Double Spaces",
+        description:
+          "Spaces or tabs sitting right next to a line break are absorbed into that same single space, instead of leaving extra spacing behind.",
+      },
+      {
+        title: "Leaves Ordinary Spacing Alone",
+        description:
+          "This tool only removes new lines — spaces and tabs that aren't next to a line break are left exactly as you typed them.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Everything runs locally in your browser. Your text is never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste your text",
+        description: "Add the text you want to join into the Input box.",
+      },
+      {
+        title: "Watch line breaks disappear",
+        description:
+          "Every line break is replaced with a single space instantly as you type — there's nothing to run.",
+      },
+      {
+        title: "Review the live statistics",
+        description:
+          "See exactly how many line breaks were removed, along with character and word counts, updating in real time.",
+      },
+      {
+        title: "Copy, paste, or download",
+        description:
+          "Copy the joined text to your clipboard, paste directly from your clipboard into the input, or download it as a .txt file.",
+      },
+    ],
+    example: {
+      title: "Joining a Multi-Line Paragraph",
+      input: "This is a\nmulti-line\nparagraph.",
+      output: "This is a multi-line paragraph.",
+    },
+    useCases: [
+      {
+        title: "Cleaning Text Copied From PDFs",
+        description:
+          "PDFs often break lines at a fixed width — join them back into flowing paragraphs after copying the text out.",
+      },
+      {
+        title: "Fixing Text Copied From Word or Documents",
+        description:
+          "Remove the line breaks left behind when copying paragraphs out of a word processor into a plain-text field.",
+      },
+      {
+        title: "Preparing Single-Line Values",
+        description:
+          "Turn a multi-line address, note, or description into a single line for a spreadsheet cell or form field.",
+      },
+      {
+        title: "Cleaning Up Song Lyrics or Poetry Line Breaks",
+        description:
+          "Join line-broken text into a single paragraph before searching, comparing, or reformatting it elsewhere.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is a line break?",
+        answer:
+          "A line break is the invisible character that starts a new line — written as LF, CRLF, or CR depending on the operating system that created the text.",
+      },
+      {
+        question: "Does this tool remove blank lines?",
+        answer:
+          "Blank lines are made of consecutive line breaks, and this tool removes all of them the same way — a run of one or more line breaks, blank lines included, always collapses to a single space rather than leaving extra gaps.",
+      },
+      {
+        question: "Will removing line breaks join my words together?",
+        answer:
+          "No. Every removed line break is replaced with a space, so words that were on separate lines always end up separated by exactly one space, never joined directly together.",
+      },
+      {
+        question: "Does this remove spaces from my text?",
+        answer:
+          "No. This tool only removes line breaks. Ordinary spaces and tabs that aren't sitting next to a line break are left completely untouched — for cleaning up extra spaces elsewhere in your text, use the Remove Extra Spaces tool instead.",
+      },
+      {
+        question: "Does it work with text copied from Word, PDFs, or other documents?",
+        answer:
+          "Yes. Text copied from documents, PDFs, and word processors often carries line breaks in the middle of paragraphs, and this tool joins them back into flowing text right in your browser.",
+      },
+      {
+        question: "Is the tool free?",
+        answer:
+          "Yes. This tool, like every other tool on CleanTextly, is completely free to use with no sign-up required.",
+      },
+    ],
+    relatedTools: [
+      "/tools/remove-extra-spaces",
+      "/tools/remove-empty-lines",
+      "/tools/remove-duplicate-lines",
+    ],
+  },
 }

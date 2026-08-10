@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, FoldHorizontal, Hash, ReplaceAll, Type } from "lucide-react"
+import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, FoldHorizontal, Hash, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
 
 export type Tool = {
   name: string
@@ -79,6 +79,13 @@ export const tools: Tool[] = [
     description: "Collapse extra spaces and tabs while keeping line breaks.",
     icon: FoldHorizontal,
     href: "/tools/remove-extra-spaces",
+    category: "text-tools",
+  },
+  {
+    name: "Remove Line Breaks",
+    description: "Join lines into one paragraph by removing line breaks.",
+    icon: UnfoldHorizontal,
+    href: "/tools/remove-line-breaks",
     category: "text-tools",
   },
 ]

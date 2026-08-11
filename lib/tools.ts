@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, FoldHorizontal, Hash, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
+import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, FoldHorizontal, Hash, ListOrdered, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
 
 export type Tool = {
   name: string
@@ -86,6 +86,13 @@ export const tools: Tool[] = [
     description: "Join lines into one paragraph by removing line breaks.",
     icon: UnfoldHorizontal,
     href: "/tools/remove-line-breaks",
+    category: "text-tools",
+  },
+  {
+    name: "Line Counter",
+    description: "Count lines, characters, and words in text instantly.",
+    icon: ListOrdered,
+    href: "/tools/line-counter",
     category: "text-tools",
   },
 ]

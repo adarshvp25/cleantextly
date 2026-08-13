@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Check } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -7,7 +8,7 @@ import { SectionHeading } from "@/components/tools/content/section-heading";
 import { FeatureList } from "@/components/tools/content/feature-list";
 import { StepGuide } from "@/components/tools/content/step-guide";
 import { FaqSection } from "@/components/tools/content/faq-section";
-import { tools } from "@/lib/tools";
+import { getFeaturedTools } from "@/lib/tools";
 import { siteConfig, ogImage } from "@/lib/site";
 import { benefits, howItWorks, useCases, homeFaqs } from "@/lib/home-content";
 
@@ -58,7 +59,7 @@ export default function Home() {
           </Button>
 
           <Button
-            render={<a href="#tools" />}
+            render={<Link href="/tools" />}
             nativeButton={false}
             variant="secondary"
             size="lg"
@@ -86,11 +87,17 @@ export default function Home() {
           <SectionHeading
             id="tools-heading"
             title="Featured Tools"
-            description="Explore all of CleanTextly's free, browser-based text tools."
+            description="Explore some of CleanTextly's most useful free browser-based text tools."
           />
 
           <div className="mt-12">
-            <ToolGrid tools={tools} />
+            <ToolGrid tools={getFeaturedTools()} />
+          </div>
+
+          <div className="mt-10 flex justify-center">
+            <Button render={<Link href="/tools" />} nativeButton={false} variant="secondary" size="lg">
+              View All Tools
+            </Button>
           </div>
         </div>
       </section>

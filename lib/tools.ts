@@ -8,6 +8,10 @@ export type Tool = {
   href: string
   category: string
   comingSoon?: boolean
+  // Homepage "Featured Tools" display order. Undefined = not featured.
+  // Adding a tool to `tools` below does NOT put it on the homepage —
+  // it only appears in the /tools catalogue unless this is set.
+  featured?: number
 }
 
 export const tools: Tool[] = [
@@ -24,6 +28,7 @@ export const tools: Tool[] = [
     icon: Braces,
     href: "/tools/json-formatter",
     category: "text-tools",
+    featured: 4,
   },
   {
     name: "Case Converter",
@@ -31,6 +36,7 @@ export const tools: Tool[] = [
     icon: CaseSensitive,
     href: "/tools/case-converter",
     category: "text-tools",
+    featured: 3,
   },
   {
     name: "Text Sorter",
@@ -52,6 +58,7 @@ export const tools: Tool[] = [
     icon: Hash,
     href: "/tools/word-counter",
     category: "text-tools",
+    featured: 1,
   },
   {
     name: "Character Counter",
@@ -59,6 +66,7 @@ export const tools: Tool[] = [
     icon: Type,
     href: "/tools/character-counter",
     category: "text-tools",
+    featured: 2,
   },
   {
     name: "Remove Empty Lines",
@@ -80,6 +88,7 @@ export const tools: Tool[] = [
     icon: FoldHorizontal,
     href: "/tools/remove-extra-spaces",
     category: "text-tools",
+    featured: 5,
   },
   {
     name: "Remove Line Breaks",
@@ -101,5 +110,15 @@ export const tools: Tool[] = [
     icon: FlipHorizontal,
     href: "/tools/text-reverser",
     category: "text-tools",
+    featured: 6,
   },
 ]
+
+// The curated set shown in the homepage "Featured Tools" section, in
+// display order. New tools are never included automatically — set
+// `featured` on a tool above to add it here.
+export function getFeaturedTools(): Tool[] {
+  return tools
+    .filter((tool) => tool.featured !== undefined)
+    .sort((a, b) => (a.featured ?? 0) - (b.featured ?? 0))
+}

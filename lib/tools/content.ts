@@ -1441,4 +1441,130 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/remove-empty-lines",
     ],
   },
+  "/tools/text-reverser": {
+    introduction:
+      "CleanTextly's Text Reverser is a free online text reverser and reverse text generator that flips your text instantly as you type. Paste or type anything and reverse text online in four different ways — the full text character by character, the order of your words, the letters inside each word, or the order of your lines — all without uploading anything or leaving your browser.",
+    features: [
+      {
+        title: "Reverse Text",
+        description:
+          'Reverses the entire text character by character, so "Hello World" becomes "dlroW olleH".',
+      },
+      {
+        title: "Reverse Words",
+        description:
+          'Keeps each word intact but flips their order, so "Hello World from CleanTextly" becomes "CleanTextly from World Hello".',
+      },
+      {
+        title: "Reverse Each Word",
+        description:
+          'Keeps word order intact but reverses the letters within each word, so "Hello World" becomes "olleH dlroW".',
+      },
+      {
+        title: "Reverse Lines",
+        description:
+          "Reverses the order of lines in multi-line text, useful for flipping lists, logs, or any line-by-line content.",
+      },
+      {
+        title: "Unicode & Emoji Safe",
+        description:
+          "Text is reversed by full character, not raw code unit, so emoji and accented letters stay intact instead of getting corrupted.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste or type your text",
+        description: "Add the text you want to reverse into the Input box.",
+      },
+      {
+        title: "Choose a reversal mode",
+        description:
+          "Select Reverse Text, Reverse Words, Reverse Each Word, or Reverse Lines from the Reversal Mode dropdown.",
+      },
+      {
+        title: "Review the live output",
+        description:
+          "The reversed result updates instantly as you type or switch modes — there's nothing to run.",
+      },
+      {
+        title: "Copy, paste, or download",
+        description:
+          "Copy the reversed text to your clipboard, paste directly from your clipboard into the input, or download it as a .txt file.",
+      },
+    ],
+    example: {
+      title: "Reversing a Sentence",
+      input: "Hello World",
+      output: "dlroW olleH",
+    },
+    useCases: [
+      {
+        title: "Word Games & Puzzles",
+        description:
+          "Create reversed words or phrases for word games, puzzles, or riddles.",
+      },
+      {
+        title: "Checking Palindromes",
+        description:
+          "Reverse a word or phrase to check whether it reads the same forwards and backwards.",
+      },
+      {
+        title: "Creative & Social Content",
+        description:
+          "Generate reversed text for captions, usernames, or novelty messages.",
+      },
+      {
+        title: "Reordering Lists or Logs",
+        description:
+          "Use Reverse Lines to flip the order of a list, changelog, or log file without retyping it.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is a text reverser?",
+        answer:
+          "A text reverser is a tool that flips text — the full text, the order of its words, the letters in each word, or the order of its lines — depending on the mode you choose.",
+      },
+      {
+        question: "How do I reverse text online?",
+        answer:
+          "Paste or type your text into the Input box and pick a reversal mode — the reversed result appears instantly, with no button to click.",
+      },
+      {
+        question: "What's the difference between Reverse Text and Reverse Words?",
+        answer:
+          'Reverse Text flips every character in the text, including spaces, so "Hello World" becomes "dlroW olleH". Reverse Words keeps each word spelled normally but flips their order, so the same input becomes "World Hello".',
+      },
+      {
+        question: "Can I reverse each word separately?",
+        answer:
+          'Yes. Reverse Each Word keeps the words in their original order but reverses the letters inside each one, so "Hello World" becomes "olleH dlroW".',
+      },
+      {
+        question: "Can I reverse multiple lines at once?",
+        answer:
+          "Yes. Reverse Lines flips the order of all lines in your text at once, including blank lines, while leaving the text within each line untouched.",
+      },
+      {
+        question: "Does the text reverser work with Unicode and emojis?",
+        answer:
+          "Yes. Text is reversed by full character rather than raw code unit, so emoji and accented letters come out intact instead of being split or corrupted.",
+      },
+      {
+        question: "Is this text reverser free?",
+        answer:
+          "Yes. This tool, like every other tool on CleanTextly, is completely free to use with no sign-up required.",
+      },
+      {
+        question: "Is my text uploaded or stored?",
+        answer:
+          "No. All reversal happens entirely in your browser using JavaScript — your text is never sent to a server or stored anywhere.",
+      },
+    ],
+    relatedTools: [
+      "/tools/case-converter",
+      "/tools/text-sorter",
+      "/tools/word-counter",
+    ],
+  },
 }

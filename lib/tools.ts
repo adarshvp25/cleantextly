@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, FoldHorizontal, Hash, ListOrdered, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
+import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, FlipHorizontal, FoldHorizontal, Hash, ListOrdered, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
 
 export type Tool = {
   name: string
@@ -93,6 +93,13 @@ export const tools: Tool[] = [
     description: "Count lines, characters, and words in text instantly.",
     icon: ListOrdered,
     href: "/tools/line-counter",
+    category: "text-tools",
+  },
+  {
+    name: "Text Reverser",
+    description: "Reverse text, words, letters, or lines instantly.",
+    icon: FlipHorizontal,
+    href: "/tools/text-reverser",
     category: "text-tools",
   },
 ]

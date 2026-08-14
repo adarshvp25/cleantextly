@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, FlipHorizontal, FoldHorizontal, Hash, ListOrdered, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
+import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, FlipHorizontal, FoldHorizontal, Hash, Link2, ListOrdered, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
 
 export type Tool = {
   name: string
@@ -111,6 +111,13 @@ export const tools: Tool[] = [
     href: "/tools/text-reverser",
     category: "text-tools",
     featured: 6,
+  },
+  {
+    name: "URL Encoder & Decoder",
+    description: "Encode and decode URLs, query strings, and special characters.",
+    icon: Link2,
+    href: "/tools/url-encoder-decoder",
+    category: "text-tools",
   },
 ]
 

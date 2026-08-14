@@ -1567,4 +1567,124 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/word-counter",
     ],
   },
+  "/tools/url-encoder-decoder": {
+    introduction:
+      "CleanTextly's URL Encoder & Decoder converts text and URLs to and from percent-encoded (URL-safe) format entirely in your browser. Encode a query parameter with encodeURIComponent, encode a full link while keeping its structure intact with encodeURI, or decode an already-encoded string back to readable text — all instantly, with nothing uploaded to a server.",
+    features: [
+      {
+        title: "Encode URI Component",
+        description:
+          'Escapes every reserved character — including &, =, ?, and / — so it\'s safe to use inside a query string or URL segment, e.g. "hello world" becomes "hello%20world".',
+      },
+      {
+        title: "Encode Full URI",
+        description:
+          "Leaves URL-structure characters like :, /, ?, #, &, and = untouched while still escaping spaces and other unsafe characters, so a complete URL stays valid after encoding.",
+      },
+      {
+        title: "Decode Either Format",
+        description:
+          "Reverses percent-encoded text back to its original characters, matching whichever encoding type — URI or URI Component — was used to encode it.",
+      },
+      {
+        title: "Unicode & Emoji Safe",
+        description:
+          "Encodes and decodes multi-byte Unicode characters and emoji correctly, since encoding operates on UTF-8 byte sequences.",
+      },
+      {
+        title: "Clear Error Messages",
+        description:
+          "If the input contains an invalid percent-encoded sequence, the tool shows a clear error message instead of crashing or silently producing garbage output.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste your text or URL",
+        description:
+          "Add the text, URL, or query string you want to encode or decode into the Input box.",
+      },
+      {
+        title: "Choose Encode or Decode",
+        description:
+          "Select Encode to percent-encode your input, or Decode to convert an already-encoded string back to plain text.",
+      },
+      {
+        title: "Pick an encoding type",
+        description:
+          "Choose URI Component for query parameters or arbitrary text, or Full URI to keep a complete URL's structure intact.",
+      },
+      {
+        title: "Copy, swap, or download",
+        description:
+          "Copy the result to your clipboard, use Swap to reverse the operation, or download it as a .txt file.",
+      },
+    ],
+    example: {
+      title: "Encoding a Query Parameter",
+      input: "hello world",
+      output: "hello%20world",
+    },
+    useCases: [
+      {
+        title: "Building Query Strings",
+        description:
+          "Encode parameter values before appending them to a URL, so spaces and special characters don't break the link.",
+      },
+      {
+        title: "Debugging URLs",
+        description: "Decode a percent-encoded URL to see exactly what data it contains.",
+      },
+      {
+        title: "API Requests",
+        description: "Prepare user input for safe inclusion in API request URLs.",
+      },
+      {
+        title: "Sharing Links",
+        description:
+          "Encode text containing spaces or symbols before sharing it as part of a link.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is URL encoding?",
+        answer:
+          "URL encoding (percent-encoding) replaces characters that aren't allowed in a URL — like spaces or & — with a % followed by their hex code, so text can be safely included in a URL.",
+      },
+      {
+        question: "What's the difference between encodeURI and encodeURIComponent?",
+        answer:
+          "encodeURI keeps URL-structure characters like :, /, ?, #, &, and = intact so a whole URL stays valid, while encodeURIComponent escapes those same characters too, since a single query value or piece of text shouldn't be interpreted as URL structure.",
+      },
+      {
+        question: "When should I use URI Component instead of Full URI?",
+        answer:
+          "Use URI Component when encoding a single query parameter, form value, or arbitrary text. Use Full URI only when encoding an entire, already-structured URL.",
+      },
+      {
+        question: "Why did decoding show an error?",
+        answer:
+          "Decoding fails if the input contains a % that isn't followed by a valid two-digit hex code, or is missing part of a multi-byte Unicode sequence — that means the text isn't validly encoded.",
+      },
+      {
+        question: "Does this tool handle emoji and other Unicode characters?",
+        answer:
+          "Yes. Encoding and decoding operate on UTF-8 byte sequences, so emoji and non-Latin characters encode and decode correctly.",
+      },
+      {
+        question: "Is this URL encoder free?",
+        answer:
+          "Yes. Like every tool on CleanTextly, it's completely free to use with no sign-up required.",
+      },
+      {
+        question: "Is my URL or text uploaded anywhere?",
+        answer:
+          "No. All encoding and decoding happens entirely in your browser using JavaScript — nothing is sent to a server or stored.",
+      },
+    ],
+    relatedTools: [
+      "/tools/find-and-replace",
+      "/tools/character-counter",
+      "/tools/case-converter",
+    ],
+  },
 }

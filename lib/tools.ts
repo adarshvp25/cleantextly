@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { ArrowDownAZ, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, FlipHorizontal, FoldHorizontal, Hash, Link2, ListOrdered, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
+import { ArrowDownAZ, Binary, Braces, CaseSensitive, CopyX, Eraser, FileSpreadsheet, FlipHorizontal, FoldHorizontal, Hash, Link2, ListOrdered, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
 
 export type Tool = {
   name: string
@@ -117,6 +117,13 @@ export const tools: Tool[] = [
     description: "Encode and decode URLs, query strings, and special characters.",
     icon: Link2,
     href: "/tools/url-encoder-decoder",
+    category: "text-tools",
+  },
+  {
+    name: "Base64 Encoder & Decoder",
+    description: "Encode text to Base64 or decode Base64 back to text.",
+    icon: Binary,
+    href: "/tools/base64-encoder-decoder",
     category: "text-tools",
   },
 ]

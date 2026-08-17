@@ -23,8 +23,8 @@ export const tools: Tool[] = [
     category: "text-tools",
   },
   {
-    name: "JSON Formatter",
-    description: "Beautify and validate JSON right in your browser.",
+    name: "JSON Formatter & Validator",
+    description: "Format, validate, and minify JSON right in your browser.",
     icon: Braces,
     href: "/tools/json-formatter",
     category: "text-tools",

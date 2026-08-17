@@ -263,53 +263,58 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
   },
   "/tools/json-formatter": {
     introduction:
-      "CleanTextly's JSON Formatter validates and pretty-prints JSON right in your browser, with clear, specific error messages when something's wrong. Paste a minified API response, a config file, or hand-written JSON, and it's instantly checked for valid syntax and reformatted with consistent 2-space indentation — no upload, no signup, and nothing ever leaves your browser.",
+      "CleanTextly's JSON Formatter & Validator is a free online JSON formatter, validator, and minifier that runs entirely in your browser. Paste a minified API response, a config file, or hand-written JSON, and instantly format (pretty-print) it with readable indentation, validate its syntax with a clear error message if something's wrong, or minify it down to a compact single line — all in one tool, with nothing ever uploaded to a server.",
     features: [
       {
-        title: "Instant Formatting",
+        title: "Format & Pretty-Print",
         description:
-          "JSON is validated and pretty-printed live as you type or paste — there's no button you have to click to see the result.",
+          "Beautifies JSON with clean, consistent 2-space indentation, turning a minified or hand-typed blob into JSON that's easy to read and review.",
       },
       {
-        title: "Clear Error Messages",
+        title: "Instant Validation",
         description:
-          "Invalid JSON shows a specific, actionable error message instead of a generic failure, so you know exactly what to fix.",
+          'Acts as a JSON syntax checker as you type, showing a clear "Valid JSON" confirmation or a specific error the moment something breaks.',
       },
       {
-        title: "Consistent 2-Space Indentation",
+        title: "Minify JSON",
         description:
-          "Output is always pretty-printed with 2-space indentation, the most common formatting convention for JSON.",
+          'Strips all formatting whitespace to produce compact JSON for storage or transmission — minifying `{ "name": "John" }` produces `{"name":"John"}` — while text inside strings is always left untouched.',
       },
       {
-        title: "Valid JSON Indicator",
+        title: "Clear, Located Error Messages",
         description:
-          "A simple checkmark confirms your JSON is syntactically valid as soon as it parses successfully.",
+          "Invalid JSON shows a specific error message — including the line and column where parsing failed when it can be determined — instead of a generic failure or a raw browser exception.",
+      },
+      {
+        title: "Handles Any Valid JSON",
+        description:
+          "Correctly formats, validates, and minifies deeply nested objects and arrays, Unicode text and emoji, escaped strings, and root-level arrays or primitive values — not just objects.",
       },
       {
         title: "100% Private",
         description:
-          "Everything runs locally in your browser. Your JSON is never uploaded, logged, or stored anywhere.",
+          "Everything runs locally in your browser using the native JSON parser. Your data is never uploaded, logged, or stored anywhere.",
       },
     ],
     howToUse: [
       {
         title: "Paste your JSON",
-        description: "Add the JSON you want to format into the input box.",
+        description:
+          "Add the JSON you want to format, validate, or minify into the input box.",
       },
       {
-        title: "Check the validation status",
+        title: "Choose a mode",
         description:
-          'A "Valid JSON" checkmark appears instantly, or a clear error message if the syntax is invalid.',
+          "Select Format to pretty-print it, Validate to check its syntax, or Minify to compact it.",
       },
       {
-        title: "Review the formatted output",
+        title: "Check the result",
         description:
-          "Valid JSON is pretty-printed with 2-space indentation automatically as you type.",
+          'A "Valid JSON" confirmation appears instantly, or a clear, specific error message if the syntax is invalid.',
       },
       {
-        title: "Copy or clear",
-        description:
-          "Copy the formatted result with one click, or clear both fields to start over.",
+        title: "Copy or download",
+        description: "Copy the result with one click, or download it as a .txt file.",
       },
     ],
     example: {
@@ -325,51 +330,61 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "Paste a minified or raw API response to instantly see its structure and spot formatting mistakes.",
       },
       {
-        title: "Reviewing Config Files",
+        title: "Working with Configuration Files",
         description:
-          "Format compact config files like package.json or tsconfig.json for easier reading and review.",
+          "Format compact config files like package.json or tsconfig.json for easier reading and review, or validate them before committing.",
       },
       {
-        title: "Validating Hand-Written JSON",
+        title: "Checking JSON Before Using It",
         description:
-          "Catch missing commas, unclosed brackets, or malformed quotes before using JSON in your code.",
+          "Validate hand-written or generated JSON — catching missing commas, unclosed brackets, or malformed quotes — before using it in your application or code.",
       },
       {
-        title: "Cleaning Up Logs & Exports",
+        title: "Reducing JSON Size for Transmission or Storage",
         description:
-          "Turn single-line JSON log entries or database exports into a readable, structured format.",
+          "Minify JSON to remove unnecessary whitespace before sending it over a network or storing it, without changing the underlying data.",
       },
     ],
     faqs: [
       {
-        question: 'What does the "Valid JSON" indicator mean?',
+        question: "What is a JSON formatter?",
         answer:
-          "It appears as soon as your input parses successfully as JSON, confirming the syntax is valid before you copy it or use it elsewhere.",
+          "A JSON formatter — also called a JSON beautifier or JSON pretty print tool — takes JSON data and rewrites it with consistent indentation and line breaks, making it easier to read without changing the underlying data.",
       },
       {
-        question: "What kind of error message will I see for invalid JSON?",
+        question: "What is a JSON validator?",
         answer:
-          "The tool shows the browser's own JSON parsing error, which typically points to where parsing failed and describes what went wrong, such as a missing comma or an unexpected token.",
+          "A JSON validator checks whether a piece of text is syntactically valid JSON, acting as a JSON syntax checker that flags problems like trailing commas, unquoted keys, or unclosed brackets.",
       },
       {
-        question: "Can I change the indentation width?",
+        question: "How do I format JSON online?",
         answer:
-          "Not currently — output is always formatted with 2-space indentation, the most common convention for JSON.",
+          "Paste your JSON into the input box and select Format — CleanTextly instantly pretty-prints it with 2-space indentation, right in your browser, with no upload required.",
       },
       {
-        question: "Does formatting change the order of my JSON keys?",
+        question: "How do I validate JSON?",
         answer:
-          "No. Keys are kept in the exact order they appear in your input; only whitespace and line breaks are added.",
+          'Paste your JSON and select Validate. A "Valid JSON" message appears instantly if the syntax is correct, or a specific error describing what went wrong if it isn\'t.',
       },
       {
-        question: "Does it support nested objects and arrays?",
+        question: "What is JSON minification?",
         answer:
-          "Yes. Any valid JSON structure — nested objects, arrays, numbers, strings, booleans, and null — is parsed and formatted correctly, no matter how deeply nested.",
+          'JSON minification removes all unnecessary whitespace — spaces, tabs, and line breaks — between JSON tokens to produce the smallest valid JSON, e.g. minifying `{ "name": "John" }` produces `{"name":"John"}`. Whitespace inside string values is never touched.',
+      },
+      {
+        question: "What's the difference between formatting and minifying JSON?",
+        answer:
+          "Formatting adds indentation and line breaks to make JSON easier for a person to read. Minifying does the opposite — it removes that formatting whitespace to make the JSON as compact as possible for storage or transmission. Both represent exactly the same data.",
+      },
+      {
+        question: "Why is my JSON invalid?",
+        answer:
+          "The most common causes are a trailing comma after the last item, an unquoted or single-quoted property name, a missing closing brace or bracket, or a value like `undefined` that isn't valid JSON. The error message shown points to roughly where parsing failed.",
       },
       {
         question: "Will my JSON be uploaded anywhere?",
         answer:
-          "No. Formatting and validation happen entirely in your browser. Your JSON is never sent to a server or stored.",
+          "No. Formatting, validation, and minification all happen entirely in your browser. Your JSON is never sent to a server or stored.",
       },
     ],
     relatedTools: [

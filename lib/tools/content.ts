@@ -1824,4 +1824,136 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/character-counter",
     ],
   },
+  "/tools/html-encoder-decoder": {
+    introduction:
+      "CleanTextly's HTML Encoder & Decoder converts HTML special characters into HTML entities, and decodes HTML entities back into readable text — entirely in your browser. HTML encoding (also called HTML escaping) replaces characters like <, >, &, and \" with safe entity codes such as &lt;, &gt;, &amp;, and &quot; so they display as literal text instead of being interpreted as markup. Decoding reverses the process, turning named entities like &copy;, decimal codes like &#169;, and hex codes like &#xA9; back into their original characters.",
+    features: [
+      {
+        title: "Encode HTML Special Characters",
+        description:
+          'Escapes <, >, &, ", and \' into their entity equivalents, e.g. `<div>` becomes `&lt;div&gt;`, so HTML-sensitive text can be safely displayed as plain text.',
+      },
+      {
+        title: "Decode Named, Decimal & Hex Entities",
+        description:
+          "Decodes named entities like &amp; and &copy;, decimal entities like &#169;, and hexadecimal entities like &#xA9;, back into their original characters — including mixed content with several entity types at once.",
+      },
+      {
+        title: "No Double-Encoding",
+        description:
+          'Recognizes text that\'s already a valid entity and leaves it alone, so encoding "&amp;" doesn\'t turn it into "&amp;amp;" — only genuinely unescaped ampersands are encoded.',
+      },
+      {
+        title: "Unicode & Emoji Safe",
+        description:
+          "Encodes and decodes correctly alongside Unicode text and emoji, so multi-byte characters pass through unchanged instead of breaking.",
+      },
+      {
+        title: "Displayed as Text, Never Rendered",
+        description:
+          "Input and output are always shown as plain text, never interpreted as live HTML — pasting a <script> tag displays it as text and never executes it.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Everything runs locally in your browser. Your HTML is never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste your HTML or entities",
+        description:
+          "Add the HTML/text you want to encode, or the HTML entities you want to decode, into the input box.",
+      },
+      {
+        title: "Choose Encode or Decode",
+        description:
+          "Select Encode to convert special characters into HTML entities, or Decode to convert entities back into readable text.",
+      },
+      {
+        title: "Review the live output",
+        description:
+          "The result updates instantly as you type — there's no button to click or page to reload.",
+      },
+      {
+        title: "Copy, swap, or download",
+        description:
+          "Copy the result to your clipboard, use Swap to reverse the operation, or download it as a .txt file.",
+      },
+    ],
+    example: {
+      title: "Encoding an HTML Snippet",
+      input: '<div class="test">Hello & welcome</div>',
+      output: "&lt;div class=&quot;test&quot;&gt;Hello &amp; welcome&lt;/div&gt;",
+    },
+    useCases: [
+      {
+        title: "Escaping User-Generated Content",
+        description:
+          "Encode text before displaying it inside an HTML page, so characters like < and & can't be mistaken for markup.",
+      },
+      {
+        title: "Decoding API or Database Output",
+        description:
+          "Decode HTML entities that come back from an API response or database export, turning &amp; and &lt; back into readable & and <.",
+      },
+      {
+        title: "Debugging HTML Snippets",
+        description:
+          "Encode a snippet of HTML so you can display and inspect its exact markup as visible text instead of having the browser render it.",
+      },
+      {
+        title: "Preparing Text for HTML Documents",
+        description:
+          "Encode plain text containing quotes, ampersands, or angle brackets before embedding it in an HTML document or template.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is HTML encoding?",
+        answer:
+          "HTML encoding — also called HTML escaping — replaces characters that have special meaning in HTML, like <, >, and &, with entity codes such as &lt;, &gt;, and &amp;, so they display as literal text instead of being interpreted as markup.",
+      },
+      {
+        question: "What is HTML decoding?",
+        answer:
+          "HTML decoding is the reverse of encoding: it converts HTML entities — named (&amp;), decimal (&#38;), or hexadecimal (&#x26;) — back into the original characters they represent.",
+      },
+      {
+        question: "What are HTML entities?",
+        answer:
+          "HTML entities are text sequences, starting with & and ending with ;, that represent a character that would otherwise be difficult or unsafe to include directly in HTML — for example &copy; for ©, or &#169; and &#xA9; for the same character using decimal and hex character codes.",
+      },
+      {
+        question: "What characters need to be escaped in HTML?",
+        answer:
+          'The characters with special meaning in HTML markup are the ones that most need escaping: & (as &amp;), < (as &lt;), > (as &gt;), " (as &quot;), and \' (as &#39;) — especially inside attribute values or anywhere user-provided text is displayed.',
+      },
+      {
+        question: "What is &amp; in HTML?",
+        answer:
+          "&amp; is the HTML entity for the ampersand character (&). It exists because a literal & can start an entity reference, so a standalone ampersand is normally escaped to &amp; to avoid ambiguity.",
+      },
+      {
+        question: "How do I encode HTML online?",
+        answer:
+          "Paste your HTML or text into the input box and select Encode — CleanTextly instantly converts special characters into HTML entities, right in your browser, with no upload required.",
+      },
+      {
+        question: "How do I decode HTML entities?",
+        answer:
+          "Paste text containing HTML entities into the input box and select Decode — named, decimal, and hexadecimal entities are converted back into their original characters instantly.",
+      },
+      {
+        question: "What is the difference between HTML encoding and URL encoding?",
+        answer:
+          "HTML encoding escapes characters that have special meaning inside HTML markup, like <, >, and &, using entities such as &lt; and &amp;. URL encoding (percent-encoding) escapes characters that aren't allowed in a URL, like spaces, using %-prefixed codes such as %20 — it's a different encoding for a different context. Use CleanTextly's URL Encoder & Decoder for URLs and query parameters.",
+      },
+    ],
+    relatedTools: [
+      "/tools/url-encoder-decoder",
+      "/tools/find-and-replace",
+      "/tools/character-counter",
+    ],
+  },
 }

@@ -1956,4 +1956,138 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/character-counter",
     ],
   },
+  "/tools/regex-tester": {
+    introduction:
+      "CleanTextly's Regex Tester lets you test regular expressions instantly in your browser. Enter a pattern, choose your flags, and paste a test string — matches are highlighted live, along with their positions and capture groups, so you can check a regex or debug why it isn't matching without leaving the page. This is a JavaScript regex tester: patterns run through the browser's native RegExp engine, so syntax matches what you'd use in JavaScript or Node.js rather than PCRE, Python, or .NET regex.",
+    features: [
+      {
+        title: "Live Match Highlighting",
+        description:
+          "Matches are highlighted directly in your test string as you type, so you can see exactly what your pattern does and doesn't catch.",
+      },
+      {
+        title: "All Standard JavaScript Flags",
+        description:
+          "Toggle g (global), i (case insensitive), m (multiline), s (dot all), and u (Unicode) independently to test how each one changes the result.",
+      },
+      {
+        title: "Match Details & Positions",
+        description:
+          "Every match shows its matched text and start/end position in the string, so you can check a regex or debug a pattern with precision.",
+      },
+      {
+        title: "Capture Groups, Including Named Groups",
+        description:
+          "Numbered capture groups and named groups like (?<username>...) are broken out individually for every match, not just the overall match text.",
+      },
+      {
+        title: "Clear Error Messages",
+        description:
+          "An invalid pattern — an unterminated character class, an unmatched parenthesis, and similar — shows a specific, readable error instead of crashing or failing silently.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Your regex and test data are processed locally in your browser using JavaScript's built-in RegExp engine — nothing is ever sent to a server.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Enter your pattern",
+        description:
+          'Type a regular expression into the Regex Pattern field — just the pattern itself, no need to wrap it in slashes like /pattern/.',
+      },
+      {
+        title: "Choose your flags",
+        description:
+          "Check g to find every match instead of just the first, and add i, m, s, or u as your pattern needs.",
+      },
+      {
+        title: "Paste your test string",
+        description:
+          "Add the text you want to check the regex against into the Test String box.",
+      },
+      {
+        title: "Review the matches",
+        description:
+          "Matches are highlighted instantly, with match count, positions, and any capture groups listed below.",
+      },
+    ],
+    example: {
+      title: "Matching Email Addresses",
+      inputLabel: "Pattern (with the g flag)",
+      outputLabel: "Test String",
+      input: "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}",
+      output: "Contact john@example.com or jane@test.org for details.",
+    },
+    useCases: [
+      {
+        title: "Checking a Regex Before Using It",
+        description:
+          "Test a pattern against real examples before pasting it into your code, to confirm it matches what you expect and nothing else.",
+      },
+      {
+        title: "Debugging Why a Pattern Doesn't Match",
+        description:
+          "See exactly which parts of your test string a regex catches, so you can spot a missing flag or an overly strict pattern quickly.",
+      },
+      {
+        title: "Extracting Data with Capture Groups",
+        description:
+          "Use capture groups to check how a pattern splits a match into parts — like a username and domain from an email address — before wiring it into a script.",
+      },
+      {
+        title: "Validating Input Formats",
+        description:
+          "Test whether values like usernames, dates, or hex colors match an expected pattern using the built-in common regex presets as a starting point.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is a regex tester?",
+        answer:
+          "A regex tester is a tool that runs a regular expression against a piece of text and shows you which parts of the text it matches, so you can check whether a pattern works as intended.",
+      },
+      {
+        question: "How do I test a regex?",
+        answer:
+          "Enter your pattern into the Regex Pattern field, choose any flags you need, and paste text into the Test String box — matches are highlighted instantly as you type.",
+      },
+      {
+        question: "How do I test regex online?",
+        answer:
+          "CleanTextly's Regex Tester runs entirely in your browser, so you can test a pattern online without installing anything or sending your data anywhere.",
+      },
+      {
+        question: "How do I check if a string matches a regex?",
+        answer:
+          'Enter the pattern and paste the string into Test String. If the pattern matches, it\'s highlighted and listed under Match Details; "No matches found" means it doesn\'t match.',
+      },
+      {
+        question: "What regex flavor does this tool use?",
+        answer:
+          "This tool uses JavaScript's native RegExp engine — the same regex flavor used in browsers and Node.js. Syntax can differ from PCRE, Python, or .NET regular expressions.",
+      },
+      {
+        question: "What's the difference between the g flag on and off?",
+        answer:
+          "With the g (global) flag, the tool finds and highlights every match in the test string. Without it, only the first match is shown, matching how JavaScript's RegExp behaves by default.",
+      },
+      {
+        question: "Is this regex tester free?",
+        answer:
+          "Yes. Like every tool on CleanTextly, it's completely free to use with no sign-up required.",
+      },
+      {
+        question: "Is my regex or test data sent to a server?",
+        answer:
+          "No. Your regex and test data are processed locally in your browser using JavaScript's built-in RegExp engine — nothing is ever uploaded, logged, or sent to a server.",
+      },
+    ],
+    relatedTools: [
+      "/tools/find-and-replace",
+      "/tools/case-converter",
+      "/tools/html-encoder-decoder",
+    ],
+  },
 }

@@ -2090,4 +2090,139 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/html-encoder-decoder",
     ],
   },
+  "/tools/html-formatter": {
+    introduction:
+      "CleanTextly's HTML Formatter beautifies messy, minified, or inconsistently indented HTML into clean, readable markup — entirely in your browser. \"HTML formatter\" and \"HTML beautifier\" both describe the same kind of tool: paste your HTML, pick an indentation style, and get consistently structured markup back, with script, style, and pre content left exactly as written since their whitespace is meaningful. Formatting only changes indentation and layout — it doesn't check whether your HTML is valid, so a formatted result can still contain markup mistakes.",
+    features: [
+      {
+        title: "Consistent Indentation",
+        description:
+          "Nested elements are indented consistently based on their depth, so deeply nested markup is easy to scan at a glance.",
+      },
+      {
+        title: "Readable, Not Line-by-Line",
+        description:
+          'An element containing only text is kept on one line — e.g. <h1>Hello</h1> — rather than being split across three lines, matching how HTML is conventionally hand-formatted.',
+      },
+      {
+        title: "Script, Style & Pre Left Untouched",
+        description:
+          "Content inside <script>, <style>, <pre>, and <textarea> is preserved exactly as written, since reformatting it could change what the JavaScript, CSS, or preformatted text actually means.",
+      },
+      {
+        title: "Choice of Indentation",
+        description: "Format with 2 spaces, 4 spaces, or tabs, to match your project's style.",
+      },
+      {
+        title: "Handles Imperfect HTML Gracefully",
+        description:
+          "Unclosed or mismatched tags are formatted as gracefully as possible instead of crashing the page or destroying your content.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Your HTML is formatted locally in your browser and is never uploaded, logged, or sent to a server.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste your HTML",
+        description: "Add the HTML you want to format into the HTML Input box.",
+      },
+      {
+        title: "Choose an indentation style",
+        description: "Pick 2 spaces, 4 spaces, or Tab from the Indentation selector.",
+      },
+      {
+        title: "Click Format",
+        description:
+          "Formatting runs on demand rather than as you type, so pasting or editing large HTML stays smooth.",
+      },
+      {
+        title: "Copy or download",
+        description: "Copy the formatted HTML to your clipboard, or download it as an .html file.",
+      },
+    ],
+    example: {
+      title: "Beautifying a Minified Snippet",
+      inputLabel: "Minified HTML",
+      outputLabel: "Formatted HTML",
+      input: "<div><h1>Hello</h1><p>This is a test.</p></div>",
+      output: "<div>\n  <h1>Hello</h1>\n  <p>This is a test.</p>\n</div>",
+    },
+    useCases: [
+      {
+        title: "Reading Minified HTML",
+        description:
+          "Paste HTML copied from a browser's dev tools or a minified build output to see its actual structure.",
+      },
+      {
+        title: "Cleaning Up Hand-Written Markup",
+        description:
+          "Beautify inconsistently indented HTML written or edited by hand into a clean, uniform style.",
+      },
+      {
+        title: "Reviewing HTML Snippets",
+        description:
+          "Format a snippet from an email template, CMS, or API response before reviewing or reusing it.",
+      },
+      {
+        title: "Preparing Code for Documentation",
+        description:
+          "Pretty-print HTML before pasting it into documentation, a code review, or a support ticket.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is an HTML formatter?",
+        answer:
+          "An HTML formatter (also called an HTML beautifier) takes HTML markup and rewrites it with consistent indentation and line breaks, making it easier to read without changing what the page actually renders.",
+      },
+      {
+        question: "How do I format HTML?",
+        answer:
+          "Paste your HTML into the HTML Input box, choose an indentation style, and click Format — the beautified result appears in the Formatted HTML box.",
+      },
+      {
+        question: "How do I beautify HTML?",
+        answer:
+          '"Beautify" and "format" mean the same thing here — paste your HTML and click Format to get clean, consistently indented markup.',
+      },
+      {
+        question: "How do I pretty print HTML?",
+        answer:
+          "Pretty printing HTML just means formatting it with readable indentation. Paste your markup into this tool and click Format to pretty print it instantly.",
+      },
+      {
+        question: "Is this HTML formatter free?",
+        answer:
+          "Yes. Like every tool on CleanTextly, it's completely free to use with no sign-up required.",
+      },
+      {
+        question: "Does this HTML formatter upload my code?",
+        answer:
+          "No. Formatting happens entirely in your browser — your HTML is never uploaded, logged, or sent to a server.",
+      },
+      {
+        question: "What is the difference between an HTML formatter and an HTML beautifier?",
+        answer:
+          'There isn\'t really one — "HTML formatter" and "HTML beautifier" are two common names for the same kind of tool: something that reformats HTML with consistent indentation and structure.',
+      },
+      {
+        question: "Can I format HTML online?",
+        answer:
+          "Yes — this tool runs entirely in your browser, so you can format HTML online without installing anything or sending your markup anywhere.",
+      },
+      {
+        question: "Does formatting mean my HTML is valid?",
+        answer:
+          "No. Formatting only reorganizes indentation and whitespace — it doesn't check your HTML against the HTML specification, so formatted markup can still contain mistakes like unclosed or mismatched tags.",
+      },
+    ],
+    relatedTools: [
+      "/tools/html-encoder-decoder",
+      "/tools/regex-tester",
+      "/tools/url-encoder-decoder",
+    ],
+  },
 }

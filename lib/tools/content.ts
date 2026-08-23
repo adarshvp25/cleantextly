@@ -2225,4 +2225,142 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/url-encoder-decoder",
     ],
   },
+  "/tools/xml-formatter": {
+    introduction:
+      "CleanTextly's XML Formatter beautifies messy, minified, or inconsistently indented XML into clean, readable markup — entirely in your browser. \"XML formatter,\" \"XML beautifier,\" and \"XML pretty printer\" all describe the same formatting task: paste your XML, pick an indentation style, and get consistently structured markup back, with the XML declaration, comments, CDATA sections, and entity references preserved exactly. Because XML is stricter than HTML, malformed input — mismatched tags, an unterminated attribute, an invalid XML declaration — is reported as a clear error instead of being silently guessed at.",
+    features: [
+      {
+        title: "Consistent Indentation",
+        description:
+          "Nested elements are indented consistently based on their depth, so deeply nested XML is easy to scan at a glance.",
+      },
+      {
+        title: "Compact Where It Should Be",
+        description:
+          'An element containing only text stays on one line — e.g. <name>John</name> — and mixed content like <p>Hello <b>World</b>!</p> stays inline too, rather than being split across several lines and picking up whitespace that was never there.',
+      },
+      {
+        title: "XML Declaration, Comments & CDATA Preserved",
+        description:
+          "The <?xml ... ?> declaration, comments, and CDATA sections are kept exactly as written — CDATA content in particular is never reformatted or reinterpreted as markup, even if it contains characters like < and > .",
+      },
+      {
+        title: "Self-Closing Elements Stay Self-Closing",
+        description:
+          'An element written as <item id="1"/> is formatted as <item id="1"/>, not expanded into <item id="1"></item>.',
+      },
+      {
+        title: "Choice of Indentation",
+        description: "Format with 2 spaces, 4 spaces, or tabs, to match your project's style.",
+      },
+      {
+        title: "Clear Errors for Malformed XML",
+        description:
+          "XML is stricter than HTML — a mismatched closing tag, an unterminated attribute, or a duplicated XML declaration produces a specific, readable error instead of guessed-at output.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Your XML is formatted locally in your browser and is never uploaded, logged, or sent to a server.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste your XML",
+        description:
+          "Add the XML you want to format into the XML Input box — it formats automatically once you paste.",
+      },
+      {
+        title: "Choose an indentation style",
+        description: "Pick 2 spaces, 4 spaces, or Tab from the Indentation selector.",
+      },
+      {
+        title: "Click Format after editing",
+        description:
+          "If you type or edit the XML by hand, click Format to refresh the output — formatting doesn't run on every keystroke.",
+      },
+      {
+        title: "Copy or download",
+        description: "Copy the formatted XML to your clipboard, or download it as an .xml file.",
+      },
+    ],
+    example: {
+      title: "Beautifying Minified XML",
+      inputLabel: "Minified XML",
+      outputLabel: "Formatted XML",
+      input:
+        "<root><item><name>John</name><age>25</age></item><item><name>Jane</name><age>30</age></item></root>",
+      output:
+        "<root>\n  <item>\n    <name>John</name>\n    <age>25</age>\n  </item>\n  <item>\n    <name>Jane</name>\n    <age>30</age>\n  </item>\n</root>",
+    },
+    useCases: [
+      {
+        title: "Reading Minified XML",
+        description:
+          "Paste an XML API response, config file, or export to see its actual structure instead of one long unreadable line.",
+      },
+      {
+        title: "Cleaning Up Hand-Written XML",
+        description:
+          "Beautify inconsistently indented XML written or edited by hand into a clean, uniform style.",
+      },
+      {
+        title: "Reviewing XML Feeds & Configs",
+        description:
+          "Format an RSS/Atom feed, SOAP payload, Maven pom.xml, or Android layout XML before reviewing or debugging it.",
+      },
+      {
+        title: "Catching Structural Mistakes",
+        description:
+          "A mismatched or unterminated tag surfaces as a clear error, helping you spot structural problems before using the XML elsewhere.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is an XML formatter?",
+        answer:
+          "An XML formatter (also called an XML beautifier or XML pretty printer) takes XML data and rewrites it with consistent indentation and line breaks, making it easier to read without changing what the document actually contains.",
+      },
+      {
+        question: "How do I format XML online?",
+        answer:
+          "Paste your XML into the XML Input box — it formats automatically. If you edit it afterward, click Format to refresh the result, all in your browser with no upload required.",
+      },
+      {
+        question: "How do I beautify XML?",
+        answer:
+          '"Beautify" and "format" mean the same thing here — paste your XML and it\'s pretty-printed instantly with consistent indentation.',
+      },
+      {
+        question: "What is the difference between an XML formatter, beautifier, and pretty printer?",
+        answer:
+          "There isn't really one — \"XML formatter,\" \"XML beautifier,\" and \"XML pretty printer\" are different names for the same kind of tool: something that reformats XML with consistent indentation and structure.",
+      },
+      {
+        question: "Is this XML formatter free?",
+        answer:
+          "Yes. Like every tool on CleanTextly, it's completely free to use with no sign-up required.",
+      },
+      {
+        question: "Does this XML formatter upload my data?",
+        answer:
+          "No. Formatting happens entirely in your browser — your XML is never uploaded, logged, or sent to a server.",
+      },
+      {
+        question: "Why did formatting show an error instead of output?",
+        answer:
+          "XML is strict about well-formedness. A mismatched or unterminated tag, an unterminated attribute value, a malformed comment or CDATA section, or more than one XML declaration will show a specific error rather than a guessed-at, potentially misleading result.",
+      },
+      {
+        question: "Does formatting mean my XML is valid?",
+        answer:
+          "Formatting checks that your XML is well-formed enough to safely restructure — it isn't a full schema/DTD validator, so formatted XML can still fail validation against a specific schema even though it formats successfully.",
+      },
+    ],
+    relatedTools: [
+      "/tools/html-formatter",
+      "/tools/json-formatter",
+      "/tools/html-encoder-decoder",
+    ],
+  },
 }

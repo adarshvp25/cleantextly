@@ -2363,4 +2363,148 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/html-encoder-decoder",
     ],
   },
+  "/tools/xml-minifier": {
+    introduction:
+      "CleanTextly's XML Minifier compresses XML into compact markup by stripping unnecessary formatting whitespace — entirely in your browser. \"XML minifier,\" \"XML compressor,\" and \"minify XML\" all describe the same job: paste pretty-printed or messy XML and get it back on as few characters as possible, with the XML declaration, comments, CDATA sections, entities, and every piece of meaningful text preserved exactly. This is a minifier, not a validator — it doesn't check your XML against a schema or DTD, and it never pretty-prints or reformats the result.",
+    features: [
+      {
+        title: "Removes Only Formatting Whitespace",
+        description:
+          "Indentation and line breaks between elements are stripped away, while any text node that actually contains data is left completely untouched.",
+      },
+      {
+        title: "Preserves Meaningful Text Exactly",
+        description:
+          'Mixed content like <p>Hello <b>World</b>!</p> keeps its exact spacing — minifying never glues words or tags together that were meant to stay apart.',
+      },
+      {
+        title: "XML Declaration, Comments & CDATA Preserved",
+        description:
+          "The <?xml ... ?> declaration, comments, and CDATA sections are kept exactly as written — CDATA content in particular is never reformatted or reinterpreted as markup, even if it contains characters like < and >.",
+      },
+      {
+        title: "Self-Closing Elements Stay Self-Closing",
+        description:
+          'An element written as <item id="1" /> becomes <item id="1"/>, not <item id="1"></item> — minifying only removes whitespace, it never changes an element\'s shape.',
+      },
+      {
+        title: "Attributes Preserved Exactly",
+        description:
+          'Multiple attributes stay correctly separated, and quoted attribute values keep their exact spacing and characters — including < or > inside a valid quoted value.',
+      },
+      {
+        title: "Clear Errors for Malformed XML",
+        description:
+          "XML is strict about well-formedness — a mismatched closing tag, an unterminated attribute, or a duplicated XML declaration produces a specific, readable error instead of guessed-at output.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Your XML is minified locally in your browser and is never uploaded, logged, or sent to a server.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste your XML",
+        description:
+          "Add the XML you want to compress into the XML Input box — it minifies automatically once you paste.",
+      },
+      {
+        title: "Click Minify after editing",
+        description:
+          "If you type or edit the XML by hand, click Minify to refresh the output — minifying doesn't run on every keystroke.",
+      },
+      {
+        title: "Check the character counts",
+        description:
+          "Compare Input Characters and Output Characters to see how much smaller the minified XML is.",
+      },
+      {
+        title: "Copy or download",
+        description: "Copy the minified XML to your clipboard, or download it as a .txt file.",
+      },
+    ],
+    example: {
+      title: "Minifying Pretty-Printed XML",
+      inputLabel: "Pretty-Printed XML",
+      outputLabel: "Minified XML",
+      input:
+        "<root>\n  <item>\n    <name>John</name>\n    <age>25</age>\n  </item>\n</root>",
+      output: "<root><item><name>John</name><age>25</age></item></root>",
+    },
+    useCases: [
+      {
+        title: "Compact Storage & Transmission",
+        description:
+          "Shrink XML config files, feeds, or payloads before storing them or sending them over a network.",
+      },
+      {
+        title: "Minifying XML to a Single Line",
+        description:
+          "Turn multi-line, hand-formatted XML into one compact line for embedding in code, logs, or a config value.",
+      },
+      {
+        title: "Reducing File Size Before Upload",
+        description:
+          "Compress an XML export or sitemap so it takes up less space, without changing what it contains.",
+      },
+      {
+        title: "Preparing XML for APIs",
+        description:
+          "Minify a SOAP payload or XML API request body down to its essential bytes before sending it.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is an XML minifier?",
+        answer:
+          "An XML minifier (also called an XML compressor) removes unnecessary formatting whitespace — indentation and line breaks — from XML, producing a smaller file that represents exactly the same structure and data.",
+      },
+      {
+        question: "How do I minify XML online?",
+        answer:
+          "Paste your XML into the XML Input box — it minifies automatically. If you edit it afterward, click Minify to refresh the result, all in your browser with no upload required.",
+      },
+      {
+        question: "Does minifying XML change its structure or data?",
+        answer:
+          "No. Minifying only removes insignificant formatting whitespace between elements. Every element, attribute, comment, CDATA section, and piece of meaningful text is preserved exactly as it was.",
+      },
+      {
+        question: "Will minifying break text that relies on spacing, like <p>Hello <b>World</b>!</p>?",
+        answer:
+          "No. Any text node that contains real content is left completely untouched, so meaningful spacing around inline elements is always preserved exactly.",
+      },
+      {
+        question: "What's the difference between minifying and compressing XML?",
+        answer:
+          '"Minify" and "compress" are used interchangeably here — both mean stripping formatting whitespace to shrink the file. This tool doesn\'t apply binary compression (like gzip); it produces smaller, still-readable XML text.',
+      },
+      {
+        question: "Is this XML minifier free?",
+        answer:
+          "Yes. Like every tool on CleanTextly, it's completely free to use with no sign-up required.",
+      },
+      {
+        question: "Does this XML minifier upload my data?",
+        answer:
+          "No. Minifying happens entirely in your browser — your XML is never uploaded, logged, or sent to a server.",
+      },
+      {
+        question: "Why did minifying show an error instead of output?",
+        answer:
+          "XML is strict about well-formedness. A mismatched or unterminated tag, an unterminated attribute value, a malformed comment or CDATA section, or more than one XML declaration will show a specific error rather than a guessed-at, potentially misleading result.",
+      },
+      {
+        question: "Does minifying successfully mean my XML is valid?",
+        answer:
+          "Minifying checks that your XML is well-formed enough to safely compress — it isn't a full schema/DTD validator, so minified XML can still fail validation against a specific schema even though it minifies successfully.",
+      },
+    ],
+    relatedTools: [
+      "/tools/xml-formatter",
+      "/tools/json-formatter",
+      "/tools/html-encoder-decoder",
+    ],
+  },
 }

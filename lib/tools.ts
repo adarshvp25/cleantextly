@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { ArrowDownAZ, Binary, Braces, CaseSensitive, CodeXml, CopyX, Eraser, FileSpreadsheet, FlipHorizontal, FoldHorizontal, Hash, IndentIncrease, Link2, ListOrdered, ListTree, Regex, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
+import { ArrowDownAZ, Binary, Braces, CaseSensitive, CodeXml, CopyX, Eraser, FileSpreadsheet, FlipHorizontal, FoldHorizontal, Hash, IndentIncrease, Link2, ListOrdered, ListTree, Minimize2, Regex, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
 
 export type Tool = {
   name: string
@@ -152,6 +152,13 @@ export const tools: Tool[] = [
     description: "Format and beautify messy or minified XML instantly.",
     icon: ListTree,
     href: "/tools/xml-formatter",
+    category: "text-tools",
+  },
+  {
+    name: "XML Minifier",
+    description: "Compress XML into compact, minified markup instantly.",
+    icon: Minimize2,
+    href: "/tools/xml-minifier",
     category: "text-tools",
   },
 ]

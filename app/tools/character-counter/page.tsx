@@ -6,9 +6,9 @@ import { ToolStructuredData } from "@/components/tools/content/tool-structured-d
 import { toolContent } from "@/lib/tools/content"
 import { siteConfig, ogImage } from "@/lib/site"
 
-const title = "Character Counter - Count Characters, Words & Letters Online"
+const title = "Character Counter & Character Count Online – Free Tool"
 const description =
-  "Count characters, words, letters, sentences, paragraphs and reading time instantly with our free online Character Counter. Fast, accurate and privacy friendly."
+  "Count characters online instantly — with or without spaces — plus words, letters, numbers, and more. Free, fast, and completely private in your browser."
 
 export const metadata: Metadata = {
   title,
@@ -49,8 +49,8 @@ export default function CharacterCounterPage() {
             Character Counter
           </h1>
           <p className="mt-3 text-muted-foreground">
-            Type or paste your text below to see live character, word, and
-            reading-time statistics.
+            Count characters online instantly, with or without spaces, along
+            with words, letters, numbers, sentences, and lines.
           </p>
         </div>
 

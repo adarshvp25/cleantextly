@@ -748,7 +748,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
   },
   "/tools/character-counter": {
     introduction:
-      "CleanTextly's Character Counter gives you a complete, live breakdown of any text — characters with and without spaces, letters, numbers, whitespace, words, sentences, paragraphs, lines, reading time, speaking time, and an estimated page count — all updating instantly as you type. Paste a tweet, a meta description, an essay, or a form field's contents, and every statistic recalculates in real time, entirely in your browser, with nothing uploaded or stored.",
+      "Character count is the total number of characters — letters, numbers, punctuation, symbols, and spaces — in a piece of text. CleanTextly's Character Counter is a free online character counter that gives you a live count with spaces and without spaces, alongside letters, numbers, whitespace, words, sentences, paragraphs, lines, reading time, speaking time, and an estimated page count — all updating instantly as you type. Paste a tweet, a meta description, an essay, or a form field's contents, and every statistic recalculates in real time, entirely in your browser, with nothing uploaded or stored.",
     features: [
       {
         title: "12 Live Statistics",
@@ -806,14 +806,19 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
     },
     useCases: [
       {
-        title: "Meeting Character Limits",
+        title: "Social & Messaging Character Limits",
         description:
-          "Check tweets, SMS messages, meta descriptions, and form fields against strict character limits before submitting.",
+          "Check social media posts, captions, and SMS messages against strict character limits before you post or send.",
       },
       {
-        title: "Writing SEO Titles & Descriptions",
+        title: "Writing SEO Titles & Meta Descriptions",
         description:
           "Keep page titles and meta descriptions within the character counts search engines display in full.",
+      },
+      {
+        title: "Meeting Form & Field Character Limits",
+        description:
+          "Confirm bios, reviews, and other form fields stay within a required character limit before you submit them.",
       },
       {
         title: "Estimating Reading & Speaking Time",
@@ -827,6 +832,31 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       },
     ],
     faqs: [
+      {
+        question: "What is a character count?",
+        answer:
+          "A character count is the total number of individual characters in your text — every letter, number, punctuation mark, and symbol. CleanTextly shows it two ways: \"with spaces\" includes every space between words, while \"without spaces\" excludes them, so you can see both at once.",
+      },
+      {
+        question: "Do spaces and punctuation count as characters?",
+        answer:
+          "Yes. Spaces, punctuation marks, and symbols are all included in the Characters (With Spaces) total. Characters (No Spaces) still includes punctuation and symbols — it only excludes whitespace.",
+      },
+      {
+        question: "What's the difference between Characters and Letters?",
+        answer:
+          "Characters counts every character exactly as typed, including numbers, punctuation, symbols, and spaces. Letters counts only alphabetic characters, in any script.",
+      },
+      {
+        question: "What's the difference between character count and word count?",
+        answer:
+          "Character count measures every individual character in your text, while word count measures whole words. A short word like \"a\" counts as 1 word but only 1 character, so the two numbers rarely match — this tool shows both at once.",
+      },
+      {
+        question: "How do I count characters online?",
+        answer:
+          "Paste or type your text into the box above — every statistic, including character count with and without spaces, updates instantly with nothing to click or upload.",
+      },
       {
         question: "Does this tool count emoji correctly?",
         answer:
@@ -843,11 +873,6 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "Pages are estimated at 250 words per page, a common standard for double-spaced documents, shown to one decimal place.",
       },
       {
-        question: "What's the difference between Characters and Letters?",
-        answer:
-          "Characters counts every character exactly as typed, including numbers, punctuation, symbols, and spaces. Letters counts only alphabetic characters, in any script.",
-      },
-      {
         question: "Does it handle right-to-left languages like Arabic or Hebrew?",
         answer:
           "Yes. Letters and characters in right-to-left scripts are counted correctly, the same as any other language.",
@@ -860,11 +885,11 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
     ],
     relatedTools: [
       "/tools/word-counter",
+      "/tools/line-counter",
+      "/tools/remove-extra-spaces",
       "/tools/case-converter",
       "/tools/text-sorter",
       "/tools/remove-duplicate-lines",
-      "/tools/json-formatter",
-      "/tools/csv-to-json",
     ],
   },
   "/tools/remove-empty-lines": {

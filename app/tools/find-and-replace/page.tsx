@@ -6,9 +6,9 @@ import { ToolStructuredData } from "@/components/tools/content/tool-structured-d
 import { toolContent } from "@/lib/tools/content"
 import { siteConfig, ogImage } from "@/lib/site"
 
-const title = "Find and Replace Online – Free Text Replacer Tool"
+const title = "Find and Replace Text Online – Free Text Replacer Tool"
 const description =
-  "Find and replace text online instantly with our free Text Replacer tool. Replace every occurrence with match case or whole word options, previewed live."
+  "Find and replace text online instantly with a free text replacer. Replace words, phrases, or characters with Match Case and Whole Word options, previewed live."
 
 export const metadata: Metadata = {
   title,
@@ -38,7 +38,7 @@ export default function FindAndReplacePage() {
   return (
     <main className="flex flex-1 flex-col bg-background">
       <ToolStructuredData
-        name="Find and Replace"
+        name="Find and Replace Text"
         description={description}
         path="/tools/find-and-replace"
       />
@@ -46,7 +46,7 @@ export default function FindAndReplacePage() {
       <section className="mx-auto w-full max-w-5xl px-4 py-12 sm:py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Find and Replace
+            Find and Replace Text
           </h1>
           <p className="mt-3 text-muted-foreground">
             Enter text to find and what to replace it with, and every

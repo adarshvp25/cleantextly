@@ -985,7 +985,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
   },
   "/tools/find-and-replace": {
     introduction:
-      "CleanTextly's Find and Replace tool lets you find and replace text online instantly — paste your content, enter the text to find and what to replace it with, and every occurrence updates live as you type. Whether you're cleaning up a document, updating placeholder text, or fixing a recurring typo, this text replacer handles it in your browser with no waiting and nothing uploaded.",
+      "CleanTextly's Find and Replace tool lets you find and replace text online instantly — paste your content, enter the words, phrases, or characters to find and what to replace them with, and every occurrence updates live as you type. This text replacer handles cleaning up a document, updating placeholder text, or fixing a recurring typo, entirely in your browser with no waiting and nothing uploaded.",
     features: [
       {
         title: "Instant, Live Replacement",
@@ -1080,9 +1080,14 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           'By default, no — "Cat" and "cat" are treated the same. Turn on "Match Case" to only replace text that matches the exact capitalization.',
       },
       {
+        question: "Can I use this tool to remove text instead of replacing it?",
+        answer:
+          'Yes. Leave "Replace With" empty and every match of your "Find" text is deleted instead of being swapped for something else — a quick way to strip out repeated words, phrases, or stray characters.',
+      },
+      {
         question: "Does this text replacer support regular expressions?",
         answer:
-          "Not yet. Regex support is planned for a future update — for now, the text you enter is always matched literally, so special characters like \".\" or \"$\" are treated as plain text.",
+          'No — this tool always matches your "Find" text literally, so characters like "." or "$" are treated as plain text rather than pattern syntax. If you need pattern-based matching, CleanTextly\'s Regex Tester lets you build and test regular expressions separately.',
       },
       {
         question: "Will it change anything other than my matches?",
@@ -1096,9 +1101,9 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       },
     ],
     relatedTools: [
+      "/tools/regex-tester",
+      "/tools/remove-extra-spaces",
       "/tools/remove-duplicate-lines",
-      "/tools/case-converter",
-      "/tools/remove-empty-lines",
     ],
   },
   "/tools/remove-extra-spaces": {

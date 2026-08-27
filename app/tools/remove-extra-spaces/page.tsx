@@ -6,9 +6,9 @@ import { ToolStructuredData } from "@/components/tools/content/tool-structured-d
 import { toolContent } from "@/lib/tools/content"
 import { siteConfig, ogImage } from "@/lib/site"
 
-const title = "Remove Extra Spaces from Text Online - Free Tool"
+const title = "Remove Extra Spaces Online – Free Text Space Remover"
 const description =
-  "Remove extra spaces from text online instantly with our free tool. Collapse multiple spaces, clean up whitespace, and keep normal word spacing intact."
+  "Remove extra spaces from text online instantly with our free text space remover. Collapse multiple spaces and tabs while keeping normal word spacing and line breaks intact."
 
 export const metadata: Metadata = {
   title,
@@ -49,8 +49,9 @@ export default function RemoveExtraSpacesPage() {
             Remove Extra Spaces
           </h1>
           <p className="mt-3 text-muted-foreground">
-            Paste your text below and every extra space or tab collapses
-            instantly, while normal word spacing and line breaks stay intact.
+            Remove extra spaces from text online — repeated spaces and tabs
+            collapse instantly, while normal word spacing and line breaks
+            stay exactly as they were.
           </p>
         </div>
 

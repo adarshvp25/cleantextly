@@ -1133,12 +1133,12 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
   },
   "/tools/remove-extra-spaces": {
     introduction:
-      "If you're looking to remove spaces from text, what you actually want is usually to remove the extra, repeated ones — not every space. CleanTextly's Remove Extra Spaces tool does exactly that, cleaning up messy whitespace online instantly. Paste in a paragraph, a pasted spreadsheet cell, or a block of copied text, and every run of repeated spaces or tabs collapses down to a single space as you type — while normal single spaces between words, and your line breaks, are left exactly as they were. This isn't a tool that strips every space from your text; it only removes the extra, unnecessary ones.",
+      "If you're looking to remove spaces from text, what you actually want is usually to remove the extra, repeated ones — not every space. CleanTextly's Remove Extra Spaces tool does exactly that, cleaning up messy whitespace and letting you remove extra spaces online instantly. Paste in a paragraph, a pasted spreadsheet cell, or a block of copied text, and every run of repeated spaces or tabs collapses down to a single space as you type — while normal single spaces between words, and your line breaks, are left exactly as they were. This isn't a tool that strips every space from your text; it only removes the extra, unnecessary ones.",
     features: [
       {
-        title: "Collapses Extra & Multiple Spaces",
+        title: "Removes Extra Spaces & Repeated Tabs",
         description:
-          "Any run of repeated spaces or tabs is reduced to a single space, so double- and triple-spaced text gets normalized automatically.",
+          "Every run of repeated spaces or tabs collapses to a single space, so double- and triple-spaced text — and stray tabs — get normalized automatically.",
       },
       {
         title: "Keeps Normal Word Spacing Intact",
@@ -1189,14 +1189,14 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
     },
     useCases: [
       {
-        title: "Cleaning Text Copied From Documents",
+        title: "Cleaning Text Copied From Word or PDFs",
         description:
-          "Remove extra spaces left behind when copying text out of a Word document, PDF, or spreadsheet cell into a plain-text field.",
+          "Remove extra spaces left behind when copying text out of a Word document, PDF, or other document into a plain-text field.",
       },
       {
-        title: "Tidying Up Pasted Data",
+        title: "Cleaning Spreadsheet & Copied Data",
         description:
-          "Normalize inconsistent spacing in names, addresses, or values before importing them elsewhere.",
+          "Normalize inconsistent spacing in text copied from Excel, Google Sheets, or other spreadsheet cells before using it elsewhere.",
       },
       {
         title: "Preparing Content for Publishing",
@@ -1204,12 +1204,22 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "Clean up double-spaced or tab-separated text before pasting it into a CMS, markdown file, or documentation page.",
       },
       {
-        title: "Fixing Typing & Formatting Habits",
+        title: "Fixing Repeated Spaces & Tabs",
         description:
           "Normalize text that accumulated extra spaces from double-spacing after periods or inconsistent tab use.",
       },
+      {
+        title: "Preparing Text for Import",
+        description:
+          "Clean up spacing in names, addresses, or values before importing them into another system, spreadsheet, or database.",
+      },
     ],
     faqs: [
+      {
+        question: "What does this remove-extra-spaces tool do?",
+        answer:
+          "It collapses runs of repeated spaces and tabs down to a single space, cleaning up messy inline whitespace while leaving normal single spaces between words, line breaks, and paragraph breaks exactly as they were.",
+      },
       {
         question: "Does this remove all the spaces from my text?",
         answer:
@@ -1231,9 +1241,9 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "No. This tool only cleans horizontal spacing within each line — blank lines and paragraph breaks are left untouched. Use the Remove Empty Lines tool if you also want to remove blank lines.",
       },
       {
-        question: "Can I use this to clean text copied from a spreadsheet?",
+        question: "Can I use it to clean text copied from Excel, Word, PDFs, or spreadsheets?",
         answer:
-          "Yes. Text copied from spreadsheets or documents often carries extra spaces, and this tool cleans that up like any other pasted text — right in your browser.",
+          "Yes. Text pasted from Excel, Word, PDFs, or any spreadsheet often carries extra spaces and tabs, and this tool cleans that up the same way it handles any other pasted text — entirely in your browser.",
       },
       {
         question: "Is my text uploaded to a server?",
@@ -1244,6 +1254,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
     relatedTools: [
       "/tools/remove-empty-lines",
       "/tools/remove-duplicate-lines",
+      "/tools/remove-line-breaks",
       "/tools/find-and-replace",
     ],
   },

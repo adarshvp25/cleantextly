@@ -8,7 +8,7 @@ import { siteConfig, ogImage } from "@/lib/site"
 
 const title = "Remove Empty Lines Online – Free Blank Line Remover"
 const description =
-  "Remove empty lines and blank lines from any text instantly with our free online Blank Line Remover. Delete empty lines fast, accurate, and 100% private."
+  "Remove empty lines and blank lines from text online instantly with this free tool. Delete whitespace-only lines while keeping your remaining text and line order intact."
 
 export const metadata: Metadata = {
   title,
@@ -49,8 +49,9 @@ export default function RemoveEmptyLinesPage() {
             Remove Empty Lines
           </h1>
           <p className="mt-3 text-muted-foreground">
-            Paste your text below and every blank or whitespace-only line is
-            removed instantly, in order, with everything else left untouched.
+            Paste your text below and empty or whitespace-only lines are
+            removed instantly, while all remaining text stays unchanged and
+            in the same order.
           </p>
         </div>
 

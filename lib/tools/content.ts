@@ -894,7 +894,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
   },
   "/tools/remove-empty-lines": {
     introduction:
-      "CleanTextly's Remove Empty Lines tool is a free online blank line remover that instantly deletes empty and whitespace-only lines from any block of text. Paste content with scattered blank lines — from a document export, a code file, or a list copied from somewhere else — and every completely empty line, along with lines containing only spaces or tabs, is removed automatically, while every other line keeps its exact original content and order.",
+      "CleanTextly's Remove Empty Lines tool is a free online empty line remover that instantly deletes blank and whitespace-only lines while leaving normal line breaks and content untouched. Paste content with scattered blank lines — from a document export, a code file, or a list copied from somewhere else — and every completely empty line, along with lines containing only spaces or tabs, is removed automatically, while every other line keeps its exact original content and order.",
     features: [
       {
         title: "Removes Blank & Whitespace-Only Lines",
@@ -972,6 +972,16 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
     ],
     faqs: [
       {
+        question: "What are empty or blank lines?",
+        answer:
+          "An empty (or blank) line is any line in your text with no content — either completely empty or containing only spaces or tabs. They're different from the normal line breaks that separate lines of real content, which this tool always keeps.",
+      },
+      {
+        question: "How do I remove blank lines from text online?",
+        answer:
+          "Paste your text into the input box — every empty or whitespace-only line is removed automatically as you type, with nothing to click or upload.",
+      },
+      {
         question: "Does this tool remove lines that only contain spaces or tabs?",
         answer:
           "Yes. Any line that's completely empty, or contains only spaces or tabs, is treated as a blank line and removed.",
@@ -982,6 +992,16 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "No. Every line that isn't empty is kept exactly as written — this tool only deletes empty lines, it never trims or rewrites the lines you keep.",
       },
       {
+        question: "What's the difference between removing empty lines and removing extra spaces?",
+        answer:
+          "Removing empty lines deletes entire blank rows from your text, while removing extra spaces collapses repeated spaces and tabs within a line instead. If you need the latter, CleanTextly's Remove Extra Spaces tool handles that separately.",
+      },
+      {
+        question: "Does removing empty lines merge my remaining lines together?",
+        answer:
+          "No. Blank lines are deleted, but your remaining lines stay on their own separate lines — this tool removes empty lines, it doesn't join lines together. Use the Remove Line Breaks tool if you want to join lines into one paragraph.",
+      },
+      {
         question: "Does it preserve the order of my remaining lines?",
         answer:
           "Yes. Lines that survive keep the exact same relative order they had in your original text.",
@@ -990,6 +1010,11 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
         question: "Does it work with Windows, Mac, and Unix line endings?",
         answer:
           "Yes. CRLF (Windows), CR (old Mac), and LF (Unix) line endings are all recognized correctly, even if a single file mixes more than one.",
+      },
+      {
+        question: "Can I use this with text copied from Word, PDF, or spreadsheets?",
+        answer:
+          "Yes. Text copied from a Word document, PDF, spreadsheet, or email often carries stray blank lines, and this tool removes them the same way it handles any other pasted text — entirely in your browser.",
       },
       {
         question: "Can I use this as an online empty line remover for large files?",
@@ -1003,9 +1028,10 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       },
     ],
     relatedTools: [
+      "/tools/remove-extra-spaces",
+      "/tools/remove-line-breaks",
+      "/tools/find-and-replace",
       "/tools/remove-duplicate-lines",
-      "/tools/text-sorter",
-      "/tools/character-counter",
     ],
   },
   "/tools/find-and-replace": {

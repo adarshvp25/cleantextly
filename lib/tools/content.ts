@@ -511,7 +511,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
   },
   "/tools/csv-to-json": {
     introduction:
-      "CleanTextly's CSV to JSON Converter turns CSV data into clean, formatted JSON right in your browser. The first row is treated as the header, and every other row becomes one JSON object — quoted fields, commas inside quotes, and escaped double quotes are all handled correctly. Paste a spreadsheet export or a hand-written CSV, and the result updates instantly, with a clear error message if anything is malformed.",
+      "CleanTextly's CSV to JSON Converter lets you convert CSV to JSON online, right in your browser. The first row is treated as the header, and every other row becomes one JSON object — quoted fields, commas inside quotes, and escaped double quotes are all handled correctly. Paste a spreadsheet export or a hand-written CSV, and the result updates instantly, with a clear error message if anything is malformed.",
     features: [
       {
         title: "Instant Conversion",
@@ -591,6 +591,16 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
     ],
     faqs: [
       {
+        question: "What does converting CSV to JSON mean?",
+        answer:
+          "Converting CSV to JSON turns comma-separated rows of data into a JSON array of objects — each row becomes one object, using the values from your first row as the property names (keys) for every other row.",
+      },
+      {
+        question: "How do I convert CSV to JSON online?",
+        answer:
+          "Paste your CSV data into the Input box — it's converted to formatted JSON automatically as you type, with nothing to install or upload.",
+      },
+      {
         question: "What happens to blank lines in my CSV?",
         answer:
           "Blank lines — including ones with only spaces or tabs — are ignored automatically and never produce empty JSON objects.",
@@ -616,16 +626,17 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           'You\'ll see a clear "Invalid CSV format." message — for example, if a quoted field is never closed.',
       },
       {
+        question: "Is the JSON output formatted or minified?",
+        answer:
+          "The output is pretty-printed with 2-space indentation as a JSON array of objects, so it's easy to read — not minified onto a single line.",
+      },
+      {
         question: "Is my CSV data uploaded anywhere?",
         answer:
           "No. Conversion happens entirely in your browser. Your CSV is never sent to a server or stored.",
       },
     ],
-    relatedTools: [
-      "/tools/json-formatter",
-      "/tools/remove-duplicate-lines",
-      "/tools/word-counter",
-    ],
+    relatedTools: ["/tools/json-formatter"],
   },
   "/tools/word-counter": {
     introduction:

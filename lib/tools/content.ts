@@ -1402,7 +1402,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
   },
   "/tools/line-counter": {
     introduction:
-      "CleanTextly's Line Counter lets you count lines in text online instantly — paste or type your text, and the line count updates live as you go. It works with any pasted or typed text, counts blank lines the same as any other line, and never modifies what you paste. Whether you need a quick line count for a script, a list, or a block of code, this line counter online tool gives you an accurate number in real time, without uploading anything.",
+      "CleanTextly's Line Counter lets you count lines in text online instantly — paste or type your text, and the line count updates live as you go. It works with any pasted or typed text, counts blank lines the same as any other line, and never modifies what you paste. Whether you need a quick line count for a script, a document, a list, or a block of code, this line counter online tool gives you an accurate number in real time, without uploading anything.",
     features: [
       {
         title: "Instant Line Count",
@@ -1497,6 +1497,11 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "It counts the number of segments your text is split into by line breaks. A single line with no breaks counts as 1 line, and each additional line break adds one more line to the count.",
       },
       {
+        question: "What is the difference between line count and word count?",
+        answer:
+          "Line count measures how many lines your text is split into by line breaks, while word count measures how many words it contains regardless of how they're arranged across those lines. A single line can hold many words, so the two numbers are usually very different — this tool shows both side by side.",
+      },
+      {
         question: "Does the Line Counter count blank lines?",
         answer:
           "Yes. A blank line is still a line — for example, \"Hello\", a blank line, then \"World\" counts as 3 lines in total, not 2.",
@@ -1507,20 +1512,26 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "Yes. This tool runs entirely in your browser, so you can count lines online instantly without installing anything or creating an account.",
       },
       {
-        question: "Does the Line Counter support pasted text?",
+        question: "Does it work with text copied from documents?",
         answer:
-          "Yes. You can paste text directly into the Input box, or use the Paste button to insert text from your clipboard automatically.",
+          "Yes. You can paste text from a Word document, PDF, spreadsheet, or any other source directly into the Input box — or use the Paste button to insert it from your clipboard automatically — and the line count updates immediately.",
       },
       {
         question: "Does it support different line endings such as Windows CRLF?",
         answer:
           "Yes. Windows-style CRLF, Unix-style LF, and old Mac-style CR line endings are all recognized correctly, and a CRLF pair always counts as a single line break, never two.",
       },
+      {
+        question: "Is my text uploaded to a server?",
+        answer:
+          "No. All counting happens entirely in your browser. Your text is never sent to a server, logged, or stored.",
+      },
     ],
     relatedTools: [
-      "/tools/word-counter",
-      "/tools/character-counter",
       "/tools/remove-empty-lines",
+      "/tools/remove-extra-spaces",
+      "/tools/character-counter",
+      "/tools/word-counter",
     ],
   },
   "/tools/text-reverser": {

@@ -640,7 +640,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
   },
   "/tools/word-counter": {
     introduction:
-      "CleanTextly's Word Counter gives you a live breakdown of any text — words, characters (with and without spaces), lines, paragraphs, sentences, and an estimated reading time — updating instantly as you type. Paste an essay, an email draft, or a social media post, and every statistic recalculates in real time, entirely in your browser, with nothing uploaded or stored.",
+      "CleanTextly's Word Counter lets you count words online and see a live breakdown of any text — words, characters (with and without spaces), lines, paragraphs, sentences, and an estimated reading time — updating instantly as you type. Paste an essay, an email draft, or a social media post, and every statistic recalculates in real time, entirely in your browser, with nothing uploaded or stored.",
     features: [
       {
         title: "7 Live Statistics",
@@ -721,6 +721,31 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
     ],
     faqs: [
       {
+        question: "What is a word counter?",
+        answer:
+          "A word counter is a tool that counts how many words are in a piece of text, along with related statistics like characters, sentences, and paragraphs — it's the online equivalent of the word count shown in a word processor.",
+      },
+      {
+        question: "How do I count words online?",
+        answer:
+          "Paste or type your text into the Input box — the Words statistic, along with every other statistic, updates instantly with nothing to click or upload.",
+      },
+      {
+        question: "How are words counted, and does punctuation affect the count?",
+        answer:
+          "Words are counted as text separated by whitespace, so punctuation attached to a word — like a comma, period, or apostrophe — doesn't split it into multiple words or change the count. Multiple spaces between words are also treated as a single separator, so extra spacing never inflates the total.",
+      },
+      {
+        question: "What's the difference between word count and character count?",
+        answer:
+          "Word count measures how many words your text contains, split by whitespace, while character count measures every individual character, including letters, numbers, punctuation, and spaces. A single word can be many characters long, so the two numbers are usually very different — this tool shows both, along with a character count without spaces.",
+      },
+      {
+        question: "What's the difference between Characters and Characters (No Spaces)?",
+        answer:
+          "Characters counts every character exactly as typed, including spaces, tabs, and line breaks. Characters (No Spaces) removes all whitespace before counting.",
+      },
+      {
         question: "How is reading time calculated?",
         answer:
           "Reading time is estimated at 200 words per minute and always rounded up, so even a single word shows a 1-minute estimate.",
@@ -736,11 +761,6 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "A new paragraph starts after one or more blank lines. Lines grouped together with no blank line between them count as a single paragraph.",
       },
       {
-        question: "What's the difference between Characters and Characters (No Spaces)?",
-        answer:
-          "Characters counts every character exactly as typed, including spaces, tabs, and line breaks. Characters (No Spaces) removes all whitespace before counting.",
-      },
-      {
         question: "Does the Copy button copy my original text or the statistics?",
         answer:
           "It copies your original input text — the statistics are just a live summary and aren't included in what's copied.",
@@ -752,9 +772,11 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       },
     ],
     relatedTools: [
-      "/tools/text-sorter",
-      "/tools/case-converter",
-      "/tools/remove-duplicate-lines",
+      "/tools/character-counter",
+      "/tools/line-counter",
+      "/tools/remove-extra-spaces",
+      "/tools/remove-empty-lines",
+      "/tools/find-and-replace",
     ],
   },
   "/tools/character-counter": {

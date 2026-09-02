@@ -263,7 +263,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
   },
   "/tools/json-formatter": {
     introduction:
-      "CleanTextly's JSON Formatter & Validator is a free online JSON formatter, validator, and minifier that runs entirely in your browser. Paste a minified API response, a config file, or hand-written JSON, and instantly format (pretty-print) it with readable indentation, validate its syntax with a clear error message if something's wrong, or minify it down to a compact single line — all in one tool, with nothing ever uploaded to a server.",
+      "CleanTextly's JSON Formatter is a free online JSON formatter, validator, and minifier that runs entirely in your browser. Paste a minified API response, a config file, or hand-written JSON, and instantly format, pretty-print, or beautify it with readable indentation, validate its syntax with a clear error message if something's wrong, or minify it down to a compact single line — all in one tool, with nothing ever uploaded to a server.",
     features: [
       {
         title: "Format & Pretty-Print",
@@ -352,6 +352,16 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "A JSON formatter — also called a JSON beautifier or JSON pretty print tool — takes JSON data and rewrites it with consistent indentation and line breaks, making it easier to read without changing the underlying data.",
       },
       {
+        question: "What is JSON pretty printing?",
+        answer:
+          "JSON pretty printing is the process of adding indentation and line breaks to JSON so its structure is easy to read, without changing any of the underlying data. This tool pretty-prints JSON automatically in Format mode, using consistent 2-space indentation.",
+      },
+      {
+        question: "What is a JSON beautifier?",
+        answer:
+          "A JSON beautifier is another name for a JSON formatter — a tool that reformats JSON with readable indentation and spacing. CleanTextly's Format mode works as a JSON beautifier, turning minified or messy JSON into a clean, readable structure.",
+      },
+      {
         question: "What is a JSON validator?",
         answer:
           "A JSON validator checks whether a piece of text is syntactically valid JSON, acting as a JSON syntax checker that flags problems like trailing commas, unquoted keys, or unclosed brackets.",
@@ -360,6 +370,11 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
         question: "How do I format JSON online?",
         answer:
           "Paste your JSON into the input box and select Format — CleanTextly instantly pretty-prints it with 2-space indentation, right in your browser, with no upload required.",
+      },
+      {
+        question: "Can I use this JSON formatter online without installing software?",
+        answer:
+          "Yes. Everything runs directly in your browser using JavaScript's built-in JSON parser — there's nothing to install, and no account or sign-up is needed.",
       },
       {
         question: "How do I validate JSON?",
@@ -377,6 +392,16 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "Formatting adds indentation and line breaks to make JSON easier for a person to read. Minifying does the opposite — it removes that formatting whitespace to make the JSON as compact as possible for storage or transmission. Both represent exactly the same data.",
       },
       {
+        question: "Does formatting change my JSON data?",
+        answer:
+          "No. Formatting only adds or removes whitespace — indentation, line breaks, and spacing. The actual data (keys, values, types, and structure) is never altered.",
+      },
+      {
+        question: "What happens if my JSON is invalid?",
+        answer:
+          "You'll see a clear error message instead of any output — including the line and column where parsing failed when it can be determined — so nothing is silently guessed at or partially formatted.",
+      },
+      {
         question: "Why is my JSON invalid?",
         answer:
           "The most common causes are a trailing comma after the last item, an unquoted or single-quoted property name, a missing closing brace or bracket, or a value like `undefined` that isn't valid JSON. The error message shown points to roughly where parsing failed.",
@@ -387,11 +412,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "No. Formatting, validation, and minification all happen entirely in your browser. Your JSON is never sent to a server or stored.",
       },
     ],
-    relatedTools: [
-      "/tools/csv-to-json",
-      "/tools/remove-duplicate-lines",
-      "/tools/word-counter",
-    ],
+    relatedTools: ["/tools/csv-to-json", "/tools/xml-formatter"],
   },
   "/tools/text-sorter": {
     introduction:

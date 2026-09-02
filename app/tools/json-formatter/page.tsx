@@ -6,9 +6,9 @@ import { ToolStructuredData } from "@/components/tools/content/tool-structured-d
 import { toolContent } from "@/lib/tools/content"
 import { siteConfig, ogImage } from "@/lib/site"
 
-const title = "JSON Formatter & Validator Online – Beautify, Validate & Minify JSON"
+const title = "JSON Formatter Online – Free JSON Beautifier"
 const description =
-  "Format, validate, and minify JSON online for free. This JSON formatter and validator pretty-prints JSON, checks syntax with clear error messages, and minifies JSON to reduce size — all in your browser."
+  "Format, beautify, and pretty-print JSON online for free with this JSON formatter. Validate syntax and minify JSON too — all instantly, right in your browser."
 
 export const metadata: Metadata = {
   title,
@@ -38,7 +38,7 @@ export default function JsonFormatterPage() {
   return (
     <main className="flex flex-1 flex-col bg-background">
       <ToolStructuredData
-        name="JSON Formatter & Validator"
+        name="JSON Formatter"
         description={description}
         path="/tools/json-formatter"
       />
@@ -46,11 +46,11 @@ export default function JsonFormatterPage() {
       <section className="mx-auto w-full max-w-5xl px-4 py-12 sm:py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            JSON Formatter & Validator
+            JSON Formatter
           </h1>
           <p className="mt-3 text-muted-foreground">
-            Format, validate, or minify JSON instantly — paste your data,
-            pick a mode, and see the result update live.
+            Format, validate, or minify JSON online instantly — paste your
+            data, pick a mode, and see the result update live.
           </p>
         </div>
 

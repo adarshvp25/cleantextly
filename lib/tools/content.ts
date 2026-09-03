@@ -36,7 +36,7 @@ export type ToolPageContent = {
 export const toolContent: Partial<Record<string, ToolPageContent>> = {
   "/tools/case-converter": {
     introduction:
-      "CleanTextly's Case Converter switches text between 8 common case styles — UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, and kebab-case — right in your browser. Paste a heading, a list of names, or a block of code, pick a style, and the result updates instantly. Nothing is uploaded, so it's just as safe for a paragraph of client notes as it is for a batch of variable names.",
+      "CleanTextly's Case Converter is a free online text case converter that switches text between 8 case styles — UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, and kebab-case — right in your browser. Paste a heading, a list of names, or a block of code, pick a style, and the result updates instantly. Nothing is uploaded, so it's just as safe for a paragraph of client notes as it is for a batch of variable names.",
     features: [
       {
         title: "8 Case Styles",
@@ -114,14 +114,34 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
     ],
     faqs: [
       {
-        question: "Does the Case Converter work with multiple lines or paragraphs?",
+        question: "What is a case converter?",
         answer:
-          "Yes. Line breaks and paragraph spacing are preserved, and camelCase, PascalCase, snake_case, and kebab-case conversions are applied to each line individually.",
+          "A case converter is a tool that rewrites your text in a different letter case — such as UPPERCASE, lowercase, Title Case, or Sentence case — without you having to retype it. CleanTextly's version also converts to identifier styles like camelCase, PascalCase, snake_case, and kebab-case.",
       },
       {
-        question: "Will converting to camelCase or snake_case remove my line breaks?",
+        question: "How do I change text case online?",
         answer:
-          "No. Each line is converted on its own, and line breaks stay exactly where they were in the original text.",
+          "Paste your text into the input box, pick a style from the Conversion Mode dropdown, and the converted text appears in the output box instantly. Nothing is uploaded and there's nothing to install.",
+      },
+      {
+        question: "What is the difference between uppercase and lowercase?",
+        answer:
+          "Uppercase (capitals) writes every letter in its large form, like THIS. Lowercase writes every letter in its small form, like this. Switching between them only changes the letters — numbers, punctuation, and spacing stay exactly as they were.",
+      },
+      {
+        question: "Can I convert lowercase to uppercase and uppercase to lowercase?",
+        answer:
+          "Yes. Choose UPPERCASE to turn lowercase text into capitals, or lowercase to turn capitals into small letters. Both work on a single word or a whole document at once.",
+      },
+      {
+        question: "What is title case?",
+        answer:
+          'Title case capitalizes the first letter of each word, like "Total Monthly Revenue". This tool capitalizes every word and lowercases the rest of each one, so it also fixes inconsistent capitalization. It does not apply style-guide rules that keep short words like "of" or "the" lowercase.',
+      },
+      {
+        question: "What is sentence case?",
+        answer:
+          'Sentence case capitalizes the first letter of each sentence and makes everything else lowercase, so "the FIRST line. the second line." becomes "The first line. The second line." New sentences are detected after a period, question mark, exclamation mark, or line break. It will not re-capitalize proper nouns or a standalone "I".',
       },
       {
         question: "What's the difference between camelCase and PascalCase?",
@@ -129,9 +149,19 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "camelCase starts with a lowercase letter, e.g. totalMonthlyRevenue. PascalCase capitalizes every word including the first, e.g. TotalMonthlyRevenue.",
       },
       {
+        question: "Does the tool preserve line breaks and punctuation?",
+        answer:
+          "For UPPERCASE, lowercase, Title Case, and Sentence case, only the letter casing changes — line breaks, punctuation, numbers, and spacing are all left untouched. camelCase, PascalCase, snake_case, and kebab-case are applied to each line separately so line breaks stay in place, but they do remove spaces and punctuation within a line, since those aren't valid in identifiers.",
+      },
+      {
         question: "Does it handle inconsistent or random capitalization correctly?",
         answer:
           'Yes. Messy input like "hELLo WoRLD" is normalized to the correct word boundaries instead of carrying the random capitalization through into the result.',
+      },
+      {
+        question: "Does it work with text copied from Word, Excel, or Google Docs?",
+        answer:
+          "Yes. Paste text from Word, Excel, Google Docs, a PDF, or anywhere else — it's treated as plain text and only the letter casing is changed. Formatting like bold, fonts, or colors isn't carried over, since the tool works with plain text only.",
       },
       {
         question: "Is my text uploaded to a server?",
@@ -140,9 +170,11 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       },
     ],
     relatedTools: [
-      "/tools/text-sorter",
-      "/tools/remove-duplicate-lines",
       "/tools/word-counter",
+      "/tools/character-counter",
+      "/tools/find-and-replace",
+      "/tools/remove-extra-spaces",
+      "/tools/text-sorter",
     ],
   },
   "/tools/remove-duplicate-lines": {

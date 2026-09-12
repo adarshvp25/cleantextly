@@ -2391,7 +2391,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
   },
   "/tools/xml-formatter": {
     introduction:
-      "CleanTextly's XML Formatter beautifies messy, minified, or inconsistently indented XML into clean, readable markup — entirely in your browser. \"XML formatter,\" \"XML beautifier,\" and \"XML pretty printer\" all describe the same formatting task: paste your XML, pick an indentation style, and get consistently structured markup back, with the XML declaration, comments, CDATA sections, and entity references preserved exactly. Because XML is stricter than HTML, malformed input — mismatched tags, an unterminated attribute, an invalid XML declaration — is reported as a clear error instead of being silently guessed at.",
+      "CleanTextly's XML Formatter beautifies messy, minified, or inconsistently indented XML into clean, readable markup — entirely in your browser. \"XML formatter,\" \"XML beautifier,\" and \"pretty-print XML\" all describe the same formatting task: paste your XML, pick an indentation style, and get consistently structured markup back, with the XML declaration, comments, CDATA sections, and entity references preserved exactly. Because XML is stricter than HTML, malformed input — mismatched tags, an unterminated attribute, an invalid XML declaration — is reported as a clear error instead of being silently guessed at.",
     features: [
       {
         title: "Consistent Indentation",
@@ -2520,11 +2520,17 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
         answer:
           "Formatting checks that your XML is well-formed enough to safely restructure — it isn't a full schema/DTD validator, so formatted XML can still fail validation against a specific schema even though it formats successfully.",
       },
+      {
+        question: "What does it mean to pretty-print XML?",
+        answer:
+          "Pretty-printing XML means rewriting it with line breaks and indentation added so its nested structure is easy to read — it's the same result this tool produces when you format your XML, just described with a different verb.",
+      },
     ],
     relatedTools: [
       "/tools/html-formatter",
       "/tools/json-formatter",
       "/tools/html-encoder-decoder",
+      "/tools/xml-minifier",
     ],
   },
   "/tools/xml-minifier": {

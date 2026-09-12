@@ -6,9 +6,9 @@ import { ToolStructuredData } from "@/components/tools/content/tool-structured-d
 import { toolContent } from "@/lib/tools/content"
 import { siteConfig, ogImage } from "@/lib/site"
 
-const title = "XML Formatter & Beautifier Online - Free XML Pretty Printer"
+const title = "XML Formatter & Beautifier Online – Free XML Pretty Printer"
 const description =
-  "Format and beautify XML online for free. Paste minified or messy XML and get clean, consistently indented markup instantly — entirely in your browser, no upload required."
+  "Beautify and pretty-print XML online for free. Paste messy or minified XML and get clean, consistently indented markup instantly — right in your browser."
 
 export const metadata: Metadata = {
   title,
@@ -38,7 +38,7 @@ export default function XmlFormatterPage() {
   return (
     <main className="flex flex-1 flex-col bg-background">
       <ToolStructuredData
-        name="XML Formatter"
+        name="XML Formatter & Beautifier"
         description={description}
         path="/tools/xml-formatter"
       />
@@ -46,11 +46,12 @@ export default function XmlFormatterPage() {
       <section className="mx-auto w-full max-w-5xl px-4 py-12 sm:py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            XML Formatter
+            XML Formatter & Beautifier
           </h1>
           <p className="mt-3 text-muted-foreground">
-            Paste your XML, pick an indentation style, and format it into
-            clean, readable markup instantly.
+            Beautify and pretty-print XML online — paste your markup, choose
+            2-space, 4-space, or tab indentation, and get clean, readable
+            output instantly.
           </p>
         </div>
 

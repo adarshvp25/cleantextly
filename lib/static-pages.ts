@@ -11,6 +11,7 @@ export type StaticPage = {
 export const staticPages: StaticPage[] = [
   { path: "/", changeFrequency: "weekly", priority: 1 },
   { path: "/tools", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/blog", changeFrequency: "weekly", priority: 0.7 },
   { path: "/categories", changeFrequency: "monthly", priority: 0.7 },
   { path: "/about", changeFrequency: "monthly", priority: 0.6 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.5 },

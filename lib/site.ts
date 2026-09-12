@@ -30,6 +30,7 @@ export const footerLinkGroups: FooterLinkGroup[] = [
     links: [
       { label: "All Tools", href: "/tools" },
       { label: "Categories", href: "/categories" },
+      { label: "Blog", href: "/blog" },
     ],
   },
   {

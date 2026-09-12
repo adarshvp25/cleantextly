@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 
 import { XmlFormatterTool } from "@/components/tools/xml-formatter-tool"
 import { ToolContentSections } from "@/components/tools/content/tool-content-sections"
@@ -64,6 +65,17 @@ export default function XmlFormatterPage() {
             <ToolContentSections content={content} />
           </div>
         )}
+
+        <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-muted-foreground">
+          Want to learn how XML beautification works? Read our guide to{" "}
+          <Link
+            href="/blog/how-to-beautify-xml-online"
+            className="text-primary underline-offset-4 hover:underline"
+          >
+            beautifying XML online
+          </Link>
+          .
+        </p>
       </section>
     </main>
   )

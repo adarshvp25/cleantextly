@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next"
 
 import { tools } from "@/lib/tools"
 import { staticPages } from "@/lib/static-pages"
+import { blogPosts } from "@/lib/blog/posts"
 
 // Required by `output: "export"` — this route has no request-time data
 // (it's derived entirely from the static `staticPages`/`tools` lists), so
@@ -31,5 +32,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...staticRoutes, ...toolRoutes]
+  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }))
+
+  return [...staticRoutes, ...toolRoutes, ...blogRoutes]
 }

@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { ArrowDownAZ, Binary, Braces, CaseSensitive, CodeXml, CopyX, Eraser, FileSpreadsheet, FlipHorizontal, FoldHorizontal, Hash, IndentIncrease, Link2, ListOrdered, ListTree, Minimize2, Regex, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
+import { ArrowDownAZ, Binary, Braces, CaseSensitive, Clock, CodeXml, CopyX, Eraser, FileSpreadsheet, FlipHorizontal, FoldHorizontal, Hash, IndentIncrease, Link2, ListOrdered, ListTree, Minimize2, Regex, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
 
 export type Tool = {
   name: string
@@ -102,6 +102,13 @@ export const tools: Tool[] = [
     description: "Count lines, characters, and words in text instantly.",
     icon: ListOrdered,
     href: "/tools/line-counter",
+    category: "text-tools",
+  },
+  {
+    name: "Reading Time Calculator",
+    description: "Estimate reading and speaking time from any text instantly.",
+    icon: Clock,
+    href: "/tools/reading-time-calculator",
     category: "text-tools",
   },
   {

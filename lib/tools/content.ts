@@ -827,6 +827,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
     relatedTools: [
       "/tools/character-counter",
       "/tools/line-counter",
+      "/tools/reading-time-calculator",
       "/tools/remove-extra-spaces",
       "/tools/remove-empty-lines",
       "/tools/find-and-replace",
@@ -972,6 +973,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
     relatedTools: [
       "/tools/word-counter",
       "/tools/line-counter",
+      "/tools/reading-time-calculator",
       "/tools/remove-extra-spaces",
       "/tools/case-converter",
       "/tools/text-sorter",
@@ -1618,6 +1620,154 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/remove-extra-spaces",
       "/tools/character-counter",
       "/tools/word-counter",
+      "/tools/reading-time-calculator",
+    ],
+  },
+  "/tools/reading-time-calculator": {
+    introduction:
+      "CleanTextly's Reading Time Calculator estimates how long it takes to read any piece of text — right in your browser. Paste an article, blog post, or script, and it instantly shows word count, character count, sentence count, and paragraph count, alongside an estimated reading time based on your chosen reading speed. Switch between Slow, Average, and Fast presets, or enter a custom words-per-minute (WPM) value, and every number updates immediately as you type or adjust the speed.",
+    features: [
+      {
+        title: "Live Reading-Time Estimate",
+        description:
+          "Estimated reading time updates instantly as you type, paste, or adjust the reading speed — there's no button to click.",
+      },
+      {
+        title: "Slow, Average & Fast Presets, Plus Custom WPM",
+        description:
+          "Choose Slow (150 WPM), Average (200 WPM), or Fast (300 WPM), or type any custom words-per-minute value of your own.",
+      },
+      {
+        title: "Full Text Statistics",
+        description:
+          "See word count, character count, sentence count, and paragraph count alongside the reading-time estimate.",
+      },
+      {
+        title: "Estimated Speaking Time",
+        description:
+          "A separate, adjustable estimate (130 WPM by default) for scripts, presentations, or anything meant to be read aloud.",
+      },
+      {
+        title: "Human-Readable Duration",
+        description:
+          'Results are shown as "2 min 30 sec" rather than a decimal, with seconds, minutes, or hours used depending on the length of the text.',
+      },
+      {
+        title: "100% Private",
+        description:
+          "Everything runs locally in your browser. Your text is never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Paste or type your text",
+        description: "Add the text you want to estimate reading time for into the input box.",
+      },
+      {
+        title: "Choose a reading speed",
+        description:
+          "Pick Slow, Average, or Fast, or enter your own custom words-per-minute value.",
+      },
+      {
+        title: "Read the live estimate",
+        description:
+          "Estimated Reading Time, Estimated Speaking Time, and every text statistic update instantly.",
+      },
+      {
+        title: "Copy or clear",
+        description:
+          "Copy your original text with one click, or clear the input to start over.",
+      },
+    ],
+    example: {
+      title: "Estimating Reading Time for a Short Paragraph",
+      inputLabel: "Sample Text",
+      outputLabel: "Live Result",
+      input:
+        "CleanTextly's Reading Time Calculator estimates how long it takes to read any piece of text. Paste an article, an email, or a set of instructions, and the tool instantly shows word count, character count, sentence count, paragraph count, and an estimated reading time based on your chosen reading speed.",
+      output:
+        "Words: 49\nCharacters: 303\nSentences: 2\nParagraphs: 1\nEstimated Reading Time: 15 sec\nBased on 200 words per minute",
+    },
+    useCases: [
+      {
+        title: "Estimating Blog Post & Article Reading Time",
+        description:
+          "Check how long a draft will take readers to get through before publishing it.",
+      },
+      {
+        title: "Timing Scripts & Presentations",
+        description:
+          "Use the speaking-time estimate to check whether a script or speech fits a target time slot.",
+      },
+      {
+        title: "Planning Newsletter & Email Content",
+        description:
+          "Gauge how long a newsletter or email will take to read so it matches your audience's attention span.",
+      },
+      {
+        title: "Comparing Reading Speeds",
+        description:
+          "Switch between Slow, Average, and Fast presets to see how reading time changes for different kinds of readers.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is a reading time calculator?",
+        answer:
+          "A reading time calculator estimates how long it will take an average reader to read a piece of text, based on its word count and a chosen reading speed measured in words per minute (WPM).",
+      },
+      {
+        question: "How is reading time calculated?",
+        answer:
+          "Reading time is calculated by dividing the word count by a reading speed in words per minute, then converting the result into seconds: (words ÷ WPM) × 60. For example, 500 words at 200 WPM works out to about 2 min 30 sec.",
+      },
+      {
+        question: "What reading speed should I use?",
+        answer:
+          "200 words per minute is a commonly used average for adult silent reading, and is the default here. Use the Slow (150 WPM) or Fast (300 WPM) presets, or a custom value, if you want an estimate for a different kind of reader.",
+      },
+      {
+        question: "What is WPM?",
+        answer:
+          "WPM stands for words per minute — a measure of reading (or speaking) speed. A higher WPM means text is read faster, producing a shorter estimated reading time for the same word count.",
+      },
+      {
+        question: "How long does it take to read 1,000 words?",
+        answer:
+          "At the default 200 WPM, 1,000 words takes about 5 minutes to read. At a slower 150 WPM it's closer to 6 min 40 sec, and at a faster 300 WPM it's about 3 min 20 sec.",
+      },
+      {
+        question: "How long does it take to read 2,000 words?",
+        answer:
+          "At the default 200 WPM, 2,000 words takes about 10 minutes to read. At 150 WPM that's roughly 13 min 20 sec, and at 300 WPM about 6 min 40 sec.",
+      },
+      {
+        question: "Can I calculate reading time for an article or blog post?",
+        answer:
+          "Yes. Paste the full text of an article, blog post, or any other document into the input box to get its word count and estimated reading time.",
+      },
+      {
+        question: "Is the reading time estimate exact?",
+        answer:
+          "No — it's an estimate based on word count and reading speed only. Actual reading time varies with the difficulty of the text, how familiar you are with the subject, distractions, and each individual's own reading speed.",
+      },
+      {
+        question: "Can I calculate speaking time too?",
+        answer:
+          "Yes. Estimated Speaking Time is shown alongside reading time, using a default speaking speed of 130 words per minute that you can also adjust.",
+      },
+      {
+        question: "Is my text uploaded anywhere?",
+        answer:
+          "No. All calculations happen entirely in your browser. Your text is never uploaded, logged, or stored.",
+      },
+    ],
+    relatedTools: [
+      "/tools/word-counter",
+      "/tools/character-counter",
+      "/tools/line-counter",
+      "/tools/remove-extra-spaces",
+      "/tools/remove-empty-lines",
     ],
   },
   "/tools/text-reverser": {

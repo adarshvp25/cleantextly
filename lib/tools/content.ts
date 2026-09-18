@@ -444,7 +444,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "No. Formatting, validation, and minification all happen entirely in your browser. Your JSON is never sent to a server or stored.",
       },
     ],
-    relatedTools: ["/tools/csv-to-json", "/tools/xml-formatter"],
+    relatedTools: ["/tools/csv-to-json", "/tools/xml-formatter", "/tools/yaml-to-json"],
   },
   "/tools/text-sorter": {
     introduction:
@@ -689,7 +689,157 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
           "No. Conversion happens entirely in your browser. Your CSV is never sent to a server or stored.",
       },
     ],
-    relatedTools: ["/tools/json-formatter"],
+    relatedTools: ["/tools/json-formatter", "/tools/yaml-to-json"],
+  },
+  "/tools/yaml-to-json": {
+    introduction:
+      "CleanTextly's YAML to JSON converter is a free, bidirectional YAML ↔ JSON converter that runs entirely in your browser. Paste YAML and convert YAML to JSON instantly, or switch direction to convert JSON to YAML — both use the same conversion direction toggle at the top of the tool, so you never need a second page. Objects, nested objects, arrays, strings, numbers, booleans, and null values are all preserved correctly in both directions, with clean, readable indentation.",
+    features: [
+      {
+        title: "One Tool, Both Directions",
+        description:
+          "Switch between YAML → JSON and JSON → YAML with a single toggle — input and output labels update instantly, with no page reload.",
+      },
+      {
+        title: "Handles Nested Structures",
+        description:
+          "Nested objects, arrays, and arrays of objects are converted correctly in both directions, not just flat key-value pairs.",
+      },
+      {
+        title: "Readable, Formatted Output",
+        description:
+          "YAML to JSON output is pretty-printed with 2-space indentation; JSON to YAML output uses clean, standard YAML formatting.",
+      },
+      {
+        title: "Clear Error Messages",
+        description:
+          "Invalid YAML or JSON shows a specific, readable error — including line and column information when the parser provides it — instead of a blank or broken result.",
+      },
+      {
+        title: "Preserves Data Types",
+        description:
+          "Strings, numbers, booleans, and null values keep their type in both directions, so \"true\" doesn't silently become the text \"true\".",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Everything runs locally in your browser. Your YAML and JSON are never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Choose a direction",
+        description:
+          "Select YAML → JSON or JSON → YAML from the Conversion Direction toggle at the top of the tool.",
+      },
+      {
+        title: "Paste your data",
+        description: "Add your YAML or JSON into the input box, based on the direction you picked.",
+      },
+      {
+        title: "Review the converted result",
+        description:
+          "The output updates automatically. A clear error message appears instead if the input isn't valid.",
+      },
+      {
+        title: "Copy or clear",
+        description:
+          "Copy the converted result with one click, or clear both fields to start over.",
+      },
+    ],
+    example: {
+      title: "Converting YAML to JSON",
+      inputLabel: "YAML Input",
+      outputLabel: "JSON Output",
+      input: "name: CleanTextly\nversion: 1\nfeatures:\n  - JSON Formatter\n  - YAML Converter\nactive: true",
+      output:
+        '{\n  "name": "CleanTextly",\n  "version": 1,\n  "features": [\n    "JSON Formatter",\n    "YAML Converter"\n  ],\n  "active": true\n}',
+    },
+    useCases: [
+      {
+        title: "Migrating Configuration Files",
+        description:
+          "Convert YAML config files (Docker Compose, Kubernetes manifests, CI pipelines) to JSON for tools or scripts that expect JSON, or the reverse.",
+      },
+      {
+        title: "Working with APIs",
+        description:
+          "Turn a JSON API response into YAML for a more compact, readable config file, or convert a YAML config back to JSON to send in a request.",
+      },
+      {
+        title: "Debugging & Inspecting Data",
+        description:
+          "Convert deeply nested YAML to JSON (or vice versa) to more easily spot structural issues or missing values.",
+      },
+      {
+        title: "Moving Data Between Tools",
+        description:
+          "Convert between formats when one tool or platform outputs YAML and another expects JSON, without hand-editing the structure.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is a YAML to JSON converter?",
+        answer:
+          "A YAML to JSON converter takes YAML — a human-readable data format often used for configuration files — and rewrites it as equivalent JSON, preserving the same structure, keys, and values.",
+      },
+      {
+        question: "How do I convert YAML to JSON?",
+        answer:
+          "Select YAML → JSON, paste your YAML into the input box, and the converted JSON appears automatically. Copy it with one click when you're ready.",
+      },
+      {
+        question: "How do I convert JSON to YAML?",
+        answer:
+          "Select JSON → YAML using the direction toggle, paste your JSON into the input box, and the converted YAML appears automatically.",
+      },
+      {
+        question: "Is YAML better than JSON for configuration files?",
+        answer:
+          "Neither is strictly \"better\" — YAML is often preferred for hand-written config files because it supports comments and reads cleanly without braces or quotes, while JSON is simpler to parse and more common for APIs and data interchange. Which one to use usually comes down to what your tools and teammates already expect.",
+      },
+      {
+        question: "Can this tool convert nested YAML to JSON?",
+        answer:
+          "Yes. Nested objects — objects inside objects, several levels deep — are converted correctly, keeping every level's structure intact in the JSON output.",
+      },
+      {
+        question: "Can this tool convert arrays and objects?",
+        answer:
+          "Yes. Arrays, objects, and arrays of objects are all supported and convert correctly in both directions.",
+      },
+      {
+        question: "Does this converter work with large YAML files?",
+        answer:
+          "Yes, for typical config-file-sized documents. Conversion happens entirely in your browser, so very large files are limited only by your device's available memory rather than any upload limit.",
+      },
+      {
+        question: "Is my YAML or JSON uploaded to a server?",
+        answer:
+          "No. All conversion happens entirely in your browser. Your data is never uploaded, logged, or sent to a server.",
+      },
+      {
+        question: "What happens if my YAML is invalid?",
+        answer:
+          "You'll see a specific, readable error message describing what's wrong — such as a badly indented value or an unclosed structure — instead of a blank or broken result.",
+      },
+      {
+        question: "Can I format the converted JSON?",
+        answer:
+          "The JSON output from YAML → JSON is already pretty-printed with 2-space indentation. If you need to reformat or minify JSON separately, CleanTextly's JSON Formatter handles that.",
+      },
+      {
+        question: "What is the difference between YAML and JSON?",
+        answer:
+          "JSON uses braces, brackets, and quotes to mark structure, while YAML uses indentation and largely omits punctuation, making it more compact to read and write by hand. Both represent the same kinds of data — objects, arrays, strings, numbers, booleans, and null — so converting between them doesn't change the underlying data, only its syntax.",
+      },
+    ],
+    relatedTools: [
+      "/tools/json-formatter",
+      "/tools/csv-to-json",
+      "/tools/xml-formatter",
+      "/tools/xml-minifier",
+    ],
   },
   "/tools/word-counter": {
     introduction:
@@ -2681,6 +2831,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/json-formatter",
       "/tools/html-encoder-decoder",
       "/tools/xml-minifier",
+      "/tools/yaml-to-json",
     ],
   },
   "/tools/xml-minifier": {
@@ -2825,6 +2976,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/xml-formatter",
       "/tools/json-formatter",
       "/tools/html-encoder-decoder",
+      "/tools/yaml-to-json",
     ],
   },
 }

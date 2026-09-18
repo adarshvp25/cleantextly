@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { ArrowDownAZ, Binary, Braces, CaseSensitive, Clock, CodeXml, CopyX, Eraser, FileSpreadsheet, FlipHorizontal, FoldHorizontal, Hash, IndentIncrease, Link2, ListOrdered, ListTree, Minimize2, Regex, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
+import { ArrowDownAZ, ArrowLeftRight, Binary, Braces, CaseSensitive, Clock, CodeXml, CopyX, Eraser, FileSpreadsheet, FlipHorizontal, FoldHorizontal, Hash, IndentIncrease, Link2, ListOrdered, ListTree, Minimize2, Regex, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
 
 export type Tool = {
   name: string
@@ -50,6 +50,13 @@ export const tools: Tool[] = [
     description: "Convert CSV data into clean, structured JSON.",
     icon: FileSpreadsheet,
     href: "/tools/csv-to-json",
+    category: "text-tools",
+  },
+  {
+    name: "YAML to JSON Converter",
+    description: "Convert YAML to JSON, or JSON to YAML, instantly.",
+    icon: ArrowLeftRight,
+    href: "/tools/yaml-to-json",
     category: "text-tools",
   },
   {

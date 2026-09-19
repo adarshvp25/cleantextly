@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 
 import { YamlJsonConverterTool } from "@/components/tools/yaml-json-converter-tool"
 import { ToolContentSections } from "@/components/tools/content/tool-content-sections"
@@ -63,6 +64,17 @@ export default function YamlToJsonPage() {
             <ToolContentSections content={content} />
           </div>
         )}
+
+        <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-muted-foreground">
+          New to converting between the two formats? Read our guide to{" "}
+          <Link
+            href="/blog/how-to-convert-yaml-to-json"
+            className="text-primary underline-offset-4 hover:underline"
+          >
+            converting YAML to JSON
+          </Link>
+          .
+        </p>
       </section>
     </main>
   )

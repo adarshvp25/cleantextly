@@ -11,6 +11,15 @@ export type BlogPost = {
 // entry here plus its own app/blog/<slug>/page.tsx.
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-to-convert-yaml-to-json",
+    title: "How to Convert YAML to JSON – A Practical Guide",
+    description:
+      "Learn how to convert YAML to JSON with a simple example, manual steps, common conversion issues, and a free online YAML to JSON converter.",
+    publishedAt: "2026-09-19",
+    excerpt:
+      "What YAML and JSON are, how to convert between them by hand or online, and the common mistakes that trip up a conversion.",
+  },
+  {
     slug: "how-to-beautify-xml-online",
     title: "How to Beautify XML Online – Step-by-Step Guide",
     description:

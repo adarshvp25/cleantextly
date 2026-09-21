@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { ArrowDownAZ, ArrowLeftRight, Binary, Braces, CaseSensitive, Clock, CodeXml, CopyX, Eraser, FileSpreadsheet, FlipHorizontal, FoldHorizontal, Hash, IndentIncrease, Link2, ListOrdered, ListTree, Minimize2, Regex, ReplaceAll, Type, UnfoldHorizontal } from "lucide-react"
+import { ArrowDownAZ, ArrowLeftRight, Binary, Braces, CaseSensitive, Clock, CodeXml, CopyX, Eraser, FileSpreadsheet, FlipHorizontal, FoldHorizontal, Hash, IndentIncrease, Link2, ListOrdered, ListTree, Minimize2, Regex, ReplaceAll, Route, Type, UnfoldHorizontal } from "lucide-react"
 
 export type Tool = {
   name: string
@@ -116,6 +116,13 @@ export const tools: Tool[] = [
     description: "Estimate reading and speaking time from any text instantly.",
     icon: Clock,
     href: "/tools/reading-time-calculator",
+    category: "text-tools",
+  },
+  {
+    name: "Slug Generator",
+    description: "Turn titles or text into clean, URL-ready slugs instantly.",
+    icon: Route,
+    href: "/tools/slug-generator",
     category: "text-tools",
   },
   {

@@ -174,6 +174,7 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/character-counter",
       "/tools/find-and-replace",
       "/tools/remove-extra-spaces",
+      "/tools/slug-generator",
       "/tools/text-sorter",
     ],
   },
@@ -2977,6 +2978,162 @@ export const toolContent: Partial<Record<string, ToolPageContent>> = {
       "/tools/json-formatter",
       "/tools/html-encoder-decoder",
       "/tools/yaml-to-json",
+    ],
+  },
+  "/tools/slug-generator": {
+    introduction:
+      "CleanTextly's Slug Generator is a free, browser-based URL slug generator that turns a title or any text into a clean slug — the readable part of a web address that identifies a page, like the last segment of /blog/how-to-build-a-website. Type or paste your text and the slug updates as you type: lowercase, accents removed, punctuation stripped, and words joined with single hyphens. Everything runs locally in your browser, so nothing you enter is uploaded.",
+    features: [
+      {
+        title: "Live Slug Generation",
+        description:
+          "The slug updates instantly as you type or paste — there's no button to click and no page reload.",
+      },
+      {
+        title: "Clean, Predictable Output",
+        description:
+          "Text is lowercased, punctuation and symbols are removed, and spaces, underscores, and repeated hyphens become a single hyphen. Slugs never start or end with a hyphen.",
+      },
+      {
+        title: "Accent Handling",
+        description:
+          "Accented Latin letters are converted to plain letters, so \"Café\" becomes \"cafe\" and \"Crème brûlée\" becomes \"creme-brulee\". Letters like ß and ø are converted too.",
+      },
+      {
+        title: "One Slug per Line",
+        description:
+          "Enter several titles, one per line, and get one slug per line in the same order. Blank lines stay blank so your lists stay aligned.",
+      },
+      {
+        title: "Works With Other Scripts",
+        description:
+          "Text in non-Latin scripts such as Cyrillic, Greek, Devanagari, or Japanese is kept as-is rather than being guessed at or dropped.",
+      },
+      {
+        title: "100% Private",
+        description:
+          "Slugs are generated locally in your browser. Your text is never uploaded, logged, or stored anywhere.",
+      },
+    ],
+    howToUse: [
+      {
+        title: "Enter your title or text",
+        description:
+          "Type or paste a page title, post title, or any text into the input box. Use Paste to insert from your clipboard.",
+      },
+      {
+        title: "Check the generated slug",
+        description:
+          "The URL slug appears right away in the output box. To convert several titles at once, put each on its own line.",
+      },
+      {
+        title: "Copy it into your URL",
+        description:
+          "Click Copy Output and paste the slug into your CMS, router, or file name. Use Clear to start over.",
+      },
+    ],
+    example: {
+      title: "Turn a title into a URL slug",
+      inputLabel: "Title",
+      outputLabel: "Slug",
+      input: "How to Convert YAML to JSON – A Practical Guide",
+      output: "how-to-convert-yaml-to-json-a-practical-guide",
+    },
+    useCases: [
+      {
+        title: "Blog Post URLs",
+        description:
+          "Create a readable URL for a new article from its headline, e.g. 10 Best Tools for Web Developers! becomes 10-best-tools-for-web-developers.",
+      },
+      {
+        title: "Web Pages and Product Pages",
+        description:
+          "Generate consistent slugs for landing pages, category pages, and product names so your URL structure stays tidy.",
+      },
+      {
+        title: "CMS and Static Site Content",
+        description:
+          "Get a ready-to-paste slug for WordPress, Ghost, Markdown files, or any framework that builds routes from a slug field.",
+      },
+      {
+        title: "File Names and Identifiers",
+        description:
+          "Use the same lowercase, hyphenated format for file names, anchors, or IDs — for example Café & Restaurant Guide becomes cafe-restaurant-guide.",
+      },
+      {
+        title: "Batch Slug Lists",
+        description:
+          "Paste a list of titles from a content plan or spreadsheet column and get a matching list of slugs in one step.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is a URL slug?",
+        answer:
+          "A URL slug is the human-readable part of a web address that identifies a specific page. In https://example.com/blog/how-to-build-a-website, the slug is how-to-build-a-website.",
+      },
+      {
+        question: "What is a slug generator?",
+        answer:
+          "A slug generator converts a title or other text into a URL-friendly slug — typically lowercase, with punctuation removed and words separated by hyphens.",
+      },
+      {
+        question: "How do I create a URL slug?",
+        answer:
+          "Enter your title in the input box and copy the generated slug. Doing it by hand means lowercasing the text, removing punctuation, and replacing spaces with hyphens.",
+      },
+      {
+        question: "Should URL slugs be lowercase?",
+        answer:
+          "Lowercase is the safest convention. Paths can be case-sensitive on some servers, so a single consistent lowercase format avoids duplicate or mismatched URLs.",
+      },
+      {
+        question: "Should spaces be replaced with hyphens?",
+        answer:
+          "Yes. Spaces aren't valid in URLs and get encoded as %20, which is hard to read. Hyphens keep words visually separate and are the common convention for slugs.",
+      },
+      {
+        question: "Should punctuation be removed from a URL slug?",
+        answer:
+          "Generally yes. Characters like commas, question marks, ampersands, and quotes have special meaning in URLs or need encoding. Removing them keeps the slug short and readable. This tool also drops apostrophes, so \"Don't\" becomes \"dont\".",
+      },
+      {
+        question: "Should I remove stop words from a slug?",
+        answer:
+          "It's optional. Words like \"the\", \"a\", and \"of\" can make a slug longer, but removing them can also change its meaning. This tool keeps them, so you can shorten the slug yourself if you want to.",
+      },
+      {
+        question: "Can I use numbers in a URL slug?",
+        answer:
+          "Yes. Numbers are valid and kept as-is, so \"10 Ways to Improve CSS\" becomes 10-ways-to-improve-css.",
+      },
+      {
+        question: "Are URL slugs case-sensitive?",
+        answer:
+          "The domain part of a URL is not case-sensitive, but the path — which includes the slug — can be, depending on the server. Using lowercase everywhere avoids surprises.",
+      },
+      {
+        question: "What happens to accents and non-English characters?",
+        answer:
+          "Accented Latin letters are converted to plain letters (é becomes e). Letters from other scripts, such as Cyrillic or Japanese, are kept as they are rather than transliterated. Browsers may show them percent-encoded when copied into a URL, so check how your platform handles them.",
+      },
+      {
+        question: "Is my text uploaded anywhere?",
+        answer:
+          "No. Slugs are generated locally in your browser. Your text is never sent to a server or stored.",
+      },
+      {
+        question: "Can I use this slug generator for blog posts and web pages?",
+        answer:
+          "Yes. It works for blog posts, landing pages, product pages, and any other content that needs a readable URL slug. A clean slug makes a URL easier to read and share, but it isn't a ranking guarantee on its own.",
+      },
+    ],
+    relatedTools: [
+      "/tools/case-converter",
+      "/tools/remove-extra-spaces",
+      "/tools/find-and-replace",
+      "/tools/character-counter",
+      "/tools/url-encoder-decoder",
     ],
   },
 }

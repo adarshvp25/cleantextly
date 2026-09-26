@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 
 import { ReadingTimeCalculatorTool } from "@/components/tools/reading-time-calculator-tool"
 import { ToolContentSections } from "@/components/tools/content/tool-content-sections"
@@ -63,6 +64,18 @@ export default function ReadingTimeCalculatorPage() {
             <ToolContentSections content={content} />
           </div>
         )}
+
+        <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-muted-foreground">
+          Want to understand how reading time is calculated? Read our guide
+          to{" "}
+          <Link
+            href="/blog/how-long-does-it-take-to-read-1000-words"
+            className="text-primary underline-offset-4 hover:underline"
+          >
+            how long it takes to read 1,000 words
+          </Link>
+          .
+        </p>
       </section>
     </main>
   )

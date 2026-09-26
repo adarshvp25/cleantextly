@@ -11,6 +11,15 @@ export type BlogPost = {
 // entry here plus its own app/blog/<slug>/page.tsx.
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-long-does-it-take-to-read-1000-words",
+    title: "How Long Does It Take to Read 1,000 Words?",
+    description:
+      "Find out how long it takes to read 1,000 words at different reading speeds, plus estimates for 500, 2,000, and 3,000 words and how to calculate reading time.",
+    publishedAt: "2026-09-26",
+    excerpt:
+      "How long 1,000 words takes to read at different speeds, plus reading time for other word counts and how to calculate it for any text.",
+  },
+  {
     slug: "how-to-convert-yaml-to-json",
     title: "How to Convert YAML to JSON – A Practical Guide",
     description:
